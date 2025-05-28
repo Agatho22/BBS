@@ -11,8 +11,10 @@ import java.io.PrintWriter;
 import java.net.URLEncoder;
 
 /**
- * 관리자 계정의 OTP 등록을 위한 서블릿.
- * 관리자 로그인 후 최초로 OTP를 등록할 때 접근되는 엔드포인트(API가 서버에서 리소스에 접근할 수 있도록 가능하게 하는 URL)
+ * OtpRegistrationServlet
+ * - 관리자 계정의 OTP 등록을 위한 서블릿 클래스입니다.
+ * - 관리자 로그인 후 OTP 등록을 위해 최초로 접근되는 엔드포인트입니다.
+ * - QR 코드 기반 OTP 앱(Google Authenticator 등) 등록 절차를 지원합니다.
  */
 @WebServlet("/registerOtp")
 public class OtpRegistrationServlet extends HttpServlet {
@@ -20,7 +22,13 @@ public class OtpRegistrationServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
-     * GET 요청 시 OTP 키를 생성하고 QR코드를 출력하는 HTML 페이지를 응답
+     * GET 요청 처리 메서드
+     * - OTP 비밀 키 생성 및 QR 코드 페이지 응답
+     *
+     * @param request 클라이언트 요청 객체
+     * @param response 서버 응답 객체
+     * @throws ServletException 서블릿 예외
+     * @throws IOException 입출력 예외
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -28,8 +36,10 @@ public class OtpRegistrationServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userID = (String) session.getAttribute("pendingAdmin"); // OTP 등록 대기 중인 관리자 ID
 
-        // 세션이 새로 생성되었거나, pendingAdmin이 없거나, 관리자가 아닌 경우 접근 차단
-       // pendingAdmin - HttpSession 객체의 속성(attribute) 이름으로, OTP 등록이 완료되기 전 단계에서 로그인한 '관리자' 사용자를 임시로 식별하기 위해 저장해둔 ID 값
+        /**
+         * 유효성 검사
+         * - 세션이 새로 생성되었거나, pendingAdmin 속성이 없거나, 관리자가 아닌 경우 접근 차단
+         */
         if (session.isNew() || userID == null || new UserDAO().adminCheck(userID) != 1) {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -37,18 +47,18 @@ public class OtpRegistrationServlet extends HttpServlet {
             return;
         }
 
-        // OTP 비밀키 생성
-        GoogleAuthenticatorKey key = OtpUtil.createCredentials(); // GoogleAuthenticator용 키 생성
-        String secret = key.getKey(); // 비밀 키 추출
+        // OTP 비밀 키 생성
+        GoogleAuthenticatorKey key = OtpUtil.createCredentials();
+        String secret = key.getKey(); // 생성된 시크릿 키 추출
 
-        // QR코드 URL 생성 (앱에 등록할 수 있도록)
-        String qrUrl = OtpUtil.getQrCodeURL(userID, secret); // TOTP URI 생성
-        String encodedQrUrl = URLEncoder.encode(qrUrl, "UTF-8"); // URL 인코딩 (QR API에 맞게)
+        // QR 코드 등록 URL 생성 및 URL 인코딩
+        String qrUrl = OtpUtil.getQrCodeURL(userID, secret);
+        String encodedQrUrl = URLEncoder.encode(qrUrl, "UTF-8");
 
-        // 세션에 secret 저장 (나중에 인증 시 비교용)
+        // 세션에 secret 저장 (OTP 코드 검증을 위한 기준값)
         session.setAttribute("otpSecret", secret);
 
-        // HTML 응답 작성
+        // 응답 HTML 페이지 작성
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
 
@@ -57,13 +67,13 @@ public class OtpRegistrationServlet extends HttpServlet {
         out.println("<h2>OTP 앱 등록</h2>");
         out.println("<p>Google Authenticator 앱에서 아래 QR코드를 스캔하세요.</p>");
 
-        // QR 코드 이미지 출력 (QR Code Generator API 활용) -> 해당 QR 기능 2023년에 종료(수정해야함)
+        // QR 코드 이미지 출력 (주의: 사용 중인 API는 2023년 종료. 대체 API 필요)
         out.println("<img src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodedQrUrl + "' alt='QR Code'>");
 
         // 수동 입력용 키 제공
         out.println("<p>또는 수동으로 입력: <b>" + secret + "</b></p>");
 
-        // 다음 단계로 이동
+        // 다음 단계로 이동 링크
         out.println("<p><a href='verifyOtp.jsp'>OTP 입력하기</a></p>");
         out.println("</body></html>");
     }
