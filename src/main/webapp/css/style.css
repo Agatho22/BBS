@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* style.css - 게시판 Tailwind 커스터마이징 전용 */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.navbar {
+	background-color: #f8f9fa;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand,
+.nav-link {
+	color: #000000 !important;
+	font-weight: 600;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+	color: #555555 !important;
+}
+
+.table th,
+.table td {
+	background-color: #ffffff;
+	color: #000000;
+	border-color: #dee2e6;
+}
+
+.table-hover tbody tr:hover td {
+	background-color: #f2f2f2;
+}
+
+/* a 링크 스타일 (Tailwind 기본 text-blue-500을 덮어씀) */
+a,
+a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+/* 기존 버튼 클래스는 충돌 우려 있으므로 이름 변경 권장 */
+.custom-btn {
+	background-color: #e0e0e0;
+	color: #000000;
+	border: none;
+}
+.custom-btn:hover {
+	background-color: #d0d0d0;
+}

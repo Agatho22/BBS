@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+* {
+	font-family : 'Nanum Gothic';
+}
+
+h1 {
+	font-family : 'Hanna';
+}
+/* custom.css */
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    border-bottom: 2px solid #FF4F00;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #FF4F00;
+    font-size: 24px;
+}
+
+.navbar-nav > li > a {
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+.navbar-nav > .dropdown > a .caret {
+    border-top-color: #f5f5f5;
+    border-bottom-color: #f5f5f5;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #f5f5f5;
+}
+
+.jumbotron {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 40px;
+    color: #FF4F00;
+}
+
+.btn-primary.custom-btn {
+    background-color: #FF4F00; /* Nike Orange */
+    border-color: #FF4F00; /* Same as background */
+    border-radius: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-primary.custom-btn:hover {
+    background-color: #FF6A00; /* Lighter Orange */
+    border-color: #FF6A00;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-control {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-indicators li {
+    background-color: #FF4F00; /* Nike Orange */
+}
+
+.carousel-indicators .active {
+    background-color: #FF6A00; /* Lighter Orange */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

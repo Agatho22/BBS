@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/root/다운로드/commons-io-2.19 (1).0-bin/commons-io-2.19.0/commons-io-2.19.0.jar"/>
+	<classpathentry kind="lib" path="/root/다운로드/googleauth-1.4.0.jar"/>
+	<classpathentry kind="lib" path="/root/다운로드/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/root/다운로드/log/log4j-core-2.25.0.jar"/>
+	<classpathentry kind="lib" path="/root/다운로드/log/apache-log4j-2.25.0-bin.zip"/>
+	<classpathentry kind="lib" path="/root/다운로드/log4j-api-2.25.0.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
