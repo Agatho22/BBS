@@ -275,8 +275,8 @@ SBOM (CycloneDX 1.5)
 
 활용 예
 
-SCA(Security Composition Analysis) 도구가 이 SBOM을 파싱하여 취약한 라이브러리를 자동 감지
+  - SCA(Security Composition Analysis) 도구가 이 SBOM을 파싱하여 취약한 라이브러리를 자동 감지
 
-보안 감사 시 사용된 외부 패키지의 출처와 버전을 명확히 검증
+  - 보안 감사 시 사용된 외부 패키지의 출처와 버전을 명확히 검증
 
-오픈소스 라이선스 분석을 통해 GPL/LGPL 등 컴플라이언스 이슈 사전 점검
+  - 오픈소스 라이선스 분석을 통해 GPL/LGPL 등 컴플라이언스 이슈 사전 점검
