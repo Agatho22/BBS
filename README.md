@@ -134,11 +134,11 @@ BBS/
 │           ├── adminUpdate.jsp                      # 관리자 사용자 수정
 │           └── adminUser.jsp                        # 관리자 사용자 관리 페이지
 
-'''
+```
 
 ---
 
-'''데이터베이스 구조
+```데이터베이스 구조
 
 -- 📝 게시판 테이블
 CREATE TABLE BBS (
@@ -192,7 +192,7 @@ CREATE TABLE FileBbsMapping (
 - **FILE**: 파일 메타데이터 (파일명, 게시글 ID)
 - **FileBbsMapping**: 게시글과 파일 간 다대다 관계 매핑용 중간 테이블
 
-'''
+```
 
 ---
 
