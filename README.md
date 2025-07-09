@@ -240,4 +240,42 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
 다만, CSRF 방어 미적용 항목은 추후 개선 계획에 포함되어 있습니다.
 
+SBOM (CycloneDX 1.5)
+해당 프로젝트는 CycloneDX 1.5에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 구조적으로 기술했습니다.
 
+목적
+소프트웨어 공급망의 투명성 확보
+
+취약점 진단 도구(SCA), 라이선스 컴플라이언스, 보안 감사 등에 활용
+
+SBOM 자동화 툴(NIST, GitHub, OWASP 등)과의 연동
+
+내용 예시 분석
+
+```분석
+"components": [
+  {
+    "type": "library",
+    "bom-ref": "pkg:maven/com.mysql/mysql-connector-j@8.4.0",
+    "name": "com.mysql:mysql-connector-j",
+    "version": "8.4.0",
+    "supplier": {
+      "contact": [
+        {
+          "name": "N/A",
+          "email": "None"
+        }
+      ]
+    }
+  }
+]
+```
+해당 예시는 mysql-connector-j (버전 8.4.0)이라는 라이브러리를 사용하고 있으며, Maven 패키지 명세(Package URL, PURL 형식)를 통해 고유하게 식별됩니다.
+
+활용 예
+
+SCA(Security Composition Analysis) 도구가 이 SBOM을 파싱하여 취약한 라이브러리를 자동 감지
+
+보안 감사 시 사용된 외부 패키지의 출처와 버전을 명확히 검증
+
+오픈소스 라이선스 분석을 통해 GPL/LGPL 등 컴플라이언스 이슈 사전 점검
