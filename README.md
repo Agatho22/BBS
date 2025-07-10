@@ -92,6 +92,8 @@ BBS/
 │       │   │   ├── AdminUserUpdateServlet.java       # 관리자 사용자 수정 기능
 │       │   │   ├── OtpRegistrationServlet.java       # OTP 등록 서블릿
 │       │   │   └── OtpVerificationServlet.java       # OTP 인증 서블릿
+│       │   ├── exception/
+│       │   │   └── DataAccessException.java          # DAO 계층에서 발생한 예외(DB 관련)를 감싸서 상위 계층(서블릿/서비스)에 전달
 │       │   ├── util/
 │       │   │   ├── HtmlUtil.java                     # HTML escape 유틸리티
 │       │   │   └── OtpUtil.java                      # OTP 코드 생성 유틸리티
