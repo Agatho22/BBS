@@ -1,10 +1,6 @@
 package user;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/deleteUser")
 public class DeleteUserServlet extends HttpServlet {
