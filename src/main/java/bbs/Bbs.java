@@ -58,7 +58,7 @@ public class Bbs {
         this.bbsAvailable = bbsAvailable;
     }
 
-    // ✅ 비밀글 여부 getter/setter
+    // 비밀글 여부 getter/setter
     public String getIsSecret() {
         return isSecret;
     }
