@@ -205,17 +205,17 @@ CREATE TABLE FileBbsMapping (
 ---
 📋 진단 개요
 
-진단 도구: Sparrow SAST (스페로우 정적 분석 도구)
+ - 진단 도구: Sparrow SAST (스페로우 정적 분석 도구)
 
-대상 시스템: JSP 기반 게시판 시스템 (사용자/관리자/파일 업로드 포함)
+ - 대상 시스템: JSP 기반 게시판 시스템 (사용자/관리자/파일 업로드 포함)
 
 진단 방식:
 
-정적 분석(Sparrow SAST: Static Application Security Testing)
+ - 정적 분석(Sparrow SAST: Static Application Security Testing)
 
-진단 시기: 2025년 6월
+ - 진단 시기: 2025년 6월
 
-진단 범위: Java 소스코드 전반(src/main/java), JSP 페이지, 사용자 입력 처리, DB 연동, 인증 로직
+ - 진단 범위: Java 소스코드 전반(src/main/java), JSP 페이지, 사용자 입력 처리, DB 연동, 인증 로직
 
 🛡️ 주요 취약점 진단 내용
 
