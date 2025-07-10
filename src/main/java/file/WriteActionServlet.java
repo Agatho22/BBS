@@ -8,13 +8,10 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.*;
-import java.io.File;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @WebServlet("/file/writeActionServlet")
 @MultipartConfig(
@@ -23,8 +20,7 @@ import org.apache.logging.log4j.Logger;
         maxRequestSize = 1024 * 1024 * 150 // 150MB
 )
 public class WriteActionServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-    private static final Logger logger = LogManager.getLogger(WriteActionServlet.class);
+	private static final long serialVersionUID = 1L;
 
     private static final String TEMP_DIR = "/opt/upload/temp";
     private static final String FINAL_DIR = "/opt/upload";
@@ -35,144 +31,135 @@ public class WriteActionServlet extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
 
         HttpSession session = request.getSession();
         String userID = (String) session.getAttribute("userID");
         if (userID == null) {
-            redirectWithAlert(response, "로그인이 필요합니다.", "login.jsp");
+            String contextPath = request.getContextPath();
+            out.println("<script>");
+            out.println("alert('로그인을 하세요.');");
+            out.println("location.href='" + contextPath + "/login.jsp';");
+            out.println("</script>");
             return;
         }
 
-        synchronized (this) {
-            new File(TEMP_DIR).mkdirs();
-            new File(FINAL_DIR).mkdirs();
-        }
+        // 디렉토리 생성
+        File tempDir = new File(TEMP_DIR);
+        if (!tempDir.exists()) tempDir.mkdirs();
+        File finalDir = new File(FINAL_DIR);
+        if (!finalDir.exists()) finalDir.mkdirs();
 
         String bbsTitle = null;
         String bbsContent = null;
         String isSecret = "N";
         String originalFileName = null;
         String storedFileName = null;
+        File tempFile = null;
         File finalFile = null;
 
         try {
             for (Part part : request.getParts()) {
-                switch (part.getName()) {
-                    case "bbsTitle":
-                        bbsTitle = readPartValue(part);
-                        break;
-                    case "bbsContent":
-                        bbsContent = readPartValue(part);
-                        break;
-                    case "isSecret":
-                        isSecret = readPartValue(part);
-                        break;
-                    case "file":
-                        if (part.getSize() > 0) {
-                            originalFileName = getFileName(part);
-                            String ext = getExtension(originalFileName);
+                if (part.getName().equals("bbsTitle")) {
+                    bbsTitle = readPartValue(part);
+                } else if (part.getName().equals("bbsContent")) {
+                    bbsContent = readPartValue(part);
+                } else if (part.getName().equals("isSecret")) {
+                    isSecret = readPartValue(part);
+                } else if (part.getName().equals("file") && part.getSize() > 0) {
+                    originalFileName = getFileName(part);
+                    String ext = getExtension(originalFileName);
 
-                            List<String> allowedExt = Arrays.asList("jpg", "jpeg", "png", "gif", "pdf", "txt");
-                            if (!allowedExt.contains(ext)) {
-                                redirectWithAlert(response, "허용되지 않은 파일 형식입니다.", null);
-                                return;
-                            }
+                    List<String> allowedExt = Arrays.asList("jpg", "jpeg", "png", "gif", "pdf", "txt");
+                    if (!allowedExt.contains(ext)) {
+                        out.println("<script>alert('허용되지 않은 파일 형식입니다.'); history.back();</script>");
+                        return;
+                    }
 
-                            if (originalFileName.toLowerCase().matches(".*(\\.jsp|\\.php|\\.asp|\\.exe).*")) {
-                                redirectWithAlert(response, "파일명에 허용되지 않은 문자열이 포함되어 있습니다.", null);
-                                return;
-                            }
+                    if (originalFileName.toLowerCase().matches(".*(\\.jsp|\\.php|\\.asp|\\.exe).*")) {
+                        out.println("<script>alert('파일명에 허용되지 않은 문자열이 포함되어 있습니다.'); history.back();</script>");
+                        return;
+                    }
 
-                            storedFileName = UUID.randomUUID().toString() + "." + ext;
-                            File tempFile = new File(TEMP_DIR, storedFileName);
-                            part.write(tempFile.getAbsolutePath());
+                    storedFileName = UUID.randomUUID().toString() + "." + ext;
+                    tempFile = new File(TEMP_DIR, storedFileName);
+                    part.write(tempFile.getAbsolutePath());
 
-                            String mimeType = getServletContext().getMimeType(tempFile.getAbsolutePath());
-                            if (mimeType == null || !mimeType.startsWith("image/")) {
+                    String mimeType = getServletContext().getMimeType(tempFile.getAbsolutePath());
+                    if (mimeType == null || !mimeType.startsWith("image/")) {
+                        tempFile.delete();
+                        out.println("<script>alert('이미지 파일만 업로드 가능합니다.'); history.back();</script>");
+                        return;
+                    }
+
+                    try (Scanner scanner = new Scanner(tempFile)) {
+                        while (scanner.hasNextLine()) {
+                            String line = scanner.nextLine().toLowerCase();
+                            if (line.contains("<%") || line.contains("java.lang.") || line.contains("request.getparameter") || line.contains("eval(")) {
                                 tempFile.delete();
-                                redirectWithAlert(response, "이미지 파일만 업로드 가능합니다.", null);
+                                out.println("<script>alert('파일 내용에 악성 코드가 포함되어 있습니다.'); history.back();</script>");
                                 return;
                             }
-
-                            try (Scanner scanner = new Scanner(tempFile)) {
-                                while (scanner.hasNextLine()) {
-                                    String line = scanner.nextLine().toLowerCase();
-                                    if (line.contains("<%") || line.contains("java.lang.") ||
-                                            line.contains("request.getparameter") || line.contains("eval(")) {
-                                        tempFile.delete();
-                                        redirectWithAlert(response, "파일 내용에 악성 코드가 포함되어 있습니다.", null);
-                                        return;
-                                    }
-                                }
-                            }
-
-                            finalFile = new File(FINAL_DIR, storedFileName);
-                            Files.move(tempFile.toPath(), finalFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                            finalFile.setExecutable(false, false);
-                            finalFile.setReadable(true, false);
-                            finalFile.setWritable(true, false);
                         }
-                        break;
+                    }
+
+                    finalFile = new File(FINAL_DIR, storedFileName);
+                    Files.move(tempFile.toPath(), finalFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    finalFile.setExecutable(false, false);
+                    finalFile.setReadable(true, false);
+                    finalFile.setWritable(true, false);
                 }
             }
 
             if (bbsTitle == null || bbsContent == null || bbsTitle.trim().isEmpty() || bbsContent.trim().isEmpty()) {
                 if (finalFile != null) finalFile.delete();
-                redirectWithAlert(response, "입력되지 않은 항목이 있습니다.", null);
+                out.println("<script>alert('입력이 안 된 항목이 있습니다.'); history.back();</script>");
                 return;
             }
 
-            try (BbsDAO bbsDAO = new BbsDAO()) {
-                int newBbsID = bbsDAO.write(bbsTitle, userID, bbsContent, isSecret);
-                if (newBbsID == -1) {
+            // 게시글 저장
+            BbsDAO bbsDAO = new BbsDAO();
+            int newBbsID = bbsDAO.write(bbsTitle, userID, bbsContent, isSecret);
+            if (newBbsID == -1) {
+                if (finalFile != null) finalFile.delete();
+                out.println("<script>alert('글 작성 실패'); history.back();</script>");
+                return;
+            }
+
+            // 파일 정보 저장
+            if (originalFileName != null && storedFileName != null) {
+                FileDAO fileDAO = new FileDAO();
+                int fileResult = fileDAO.upload(originalFileName, storedFileName, newBbsID);
+                if (fileResult <= 0) {
                     if (finalFile != null) finalFile.delete();
-                    redirectWithAlert(response, "글 작성 실패", null);
+                    out.println("<script>alert('파일 저장 실패'); history.back();</script>");
                     return;
                 }
-
-                if (originalFileName != null && storedFileName != null) {
-                    try (FileDAO fileDAO = new FileDAO()) {
-                        int result = fileDAO.upload(originalFileName, storedFileName, newBbsID);
-                        if (result <= 0) {
-                            if (finalFile != null) finalFile.delete();
-                            redirectWithAlert(response, "파일 저장 실패", null);
-                            return;
-                        }
-                    }
-                }
-
-                try (UserDAO userDAO = new UserDAO()) {
-                    boolean isAdmin = (userDAO.adminCheck(userID) != 0);
-                    redirectWithAlert(response, "글 작성이 완료되었습니다.", isAdmin ? "adminBbs.jsp" : "bbs");
-                }
             }
 
-        } catch (Exception e) {
-            logger.error("파일 업로드 처리 중 오류 발생: {}", e.toString());
-            if (finalFile != null) finalFile.delete();
-            redirectWithAlert(response, "일시적인 오류가 발생했습니다. 잠시 후 다시 시도해주세요.", null);
-        }
-    }
+            // 관리자 여부 확인
+            UserDAO userDAO = new UserDAO();
+            boolean isAdmin = (userDAO.adminCheck(userID) != 0);
 
-    private void redirectWithAlert(HttpServletResponse response, String message, String location) throws IOException {
-        try (PrintWriter out = response.getWriter()) {
-            out.println("<script>alert('" + escapeJs(message) + "');");
-            if (location != null) {
-                out.println("location.href='" + location + "';");
-            } else {
-                out.println("history.back();");
-            }
+            String contextPath = request.getContextPath();
+            out.println("<script>");
+            out.println("alert('글 작성 완료');");
+            out.println("location.href='" + (isAdmin ? contextPath + "/adminBbs.jsp" : contextPath + "/bbs") + "';");
             out.println("</script>");
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (finalFile != null) finalFile.delete();
+            out.println("<script>alert('오류가 발생했습니다.'); history.back();</script>");
         }
     }
 
     private String readPartValue(Part part) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(part.getInputStream(), "UTF-8"))) {
-            StringBuilder value = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) value.append(line);
-            return value.toString();
-        }
+        BufferedReader reader = new BufferedReader(new InputStreamReader(part.getInputStream(), "UTF-8"));
+        StringBuilder value = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) value.append(line);
+        return value.toString();
     }
 
     private String getFileName(Part part) {
@@ -188,11 +175,6 @@ public class WriteActionServlet extends HttpServlet {
     }
 
     private String getExtension(String filename) {
-        int dotIndex = filename.lastIndexOf(".");
-        return (dotIndex != -1) ? filename.substring(dotIndex + 1).toLowerCase() : "";
-    }
-
-    private String escapeJs(String s) {
-        return s.replace("'", "\\'").replace("\"", "\\\"");
+        return filename.substring(filename.lastIndexOf(".") + 1).toLowerCase();
     }
 }
