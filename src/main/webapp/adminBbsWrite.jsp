@@ -145,7 +145,7 @@ body {
 	</nav>
 	<div class="container mt-5">
 		<div class="row">
-			<form method="post" action="writeAction.jsp"
+			<form method="post" action="file/writeActionServlet"
 				enctype="multipart/form-data" class="col-12">
 				<table class="table table-striped"
 					style="text-align: center; border: 1px solid #dddddd">
