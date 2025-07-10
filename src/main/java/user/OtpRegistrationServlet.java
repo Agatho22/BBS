@@ -2,6 +2,8 @@ package user;
 
 import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 import utils.OtpUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,71 +12,82 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLEncoder;
 
-/**
- * OtpRegistrationServlet
- * - 관리자 계정의 OTP 등록을 위한 서블릿 클래스입니다.
- * - 관리자 로그인 후 OTP 등록을 위해 최초로 접근되는 엔드포인트입니다.
- * - QR 코드 기반 OTP 앱(Google Authenticator 등) 등록 절차를 지원합니다.
- */
 @WebServlet("/registerOtp")
 public class OtpRegistrationServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+    private static final Logger logger = LogManager.getLogger(OtpRegistrationServlet.class);
 
-    /**
-     * GET 요청 처리 메서드
-     * - OTP 비밀 키 생성 및 QR 코드 페이지 응답
-     *
-     * @param request 클라이언트 요청 객체
-     * @param response 서버 응답 객체
-     * @throws ServletException 서블릿 예외
-     * @throws IOException 입출력 예외
-     */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        String userID = (String) session.getAttribute("pendingAdmin"); // OTP 등록 대기 중인 관리자 ID
+        String userID = (String) session.getAttribute("pendingAdmin");
 
-        /**
-         * 유효성 검사
-         * - 세션이 새로 생성되었거나, pendingAdmin 속성이 없거나, 관리자가 아닌 경우 접근 차단
-         */
-        if (session.isNew() || userID == null || new UserDAO().adminCheck(userID) != 1) {
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('관리자만 접근할 수 있습니다.'); location.href='login.jsp';</script>");
+        if (session.isNew() || userID == null) {
+            logger.warn("비정상 접근 시도 또는 세션 없음");
+            denyAccess(response);
             return;
         }
 
-        // OTP 비밀 키 생성
-        GoogleAuthenticatorKey key = OtpUtil.createCredentials();
-        String secret = key.getKey(); // 생성된 시크릿 키 추출
+        try (UserDAO userDAO = new UserDAO()) {
+            if (userDAO.adminCheck(userID) != 1) {
+                logger.warn("관리자 인증 실패: {}", userID);
+                denyAccess(response);
+                return;
+            }
+        } catch (Exception e) {
+            logger.error("DB 오류 - 관리자 확인 중 예외 발생", e);
+            showErrorPage(response, "내부 서버 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+            return;
+        }
 
-        // QR 코드 등록 URL 생성 및 URL 인코딩
-        String qrUrl = OtpUtil.getQrCodeURL(userID, secret);
-        String encodedQrUrl = URLEncoder.encode(qrUrl, "UTF-8");
+        try {
+            GoogleAuthenticatorKey key = OtpUtil.createCredentials();
+            String secret = key.getKey();
 
-        // 세션에 secret 저장 (OTP 코드 검증을 위한 기준값)
-        session.setAttribute("otpSecret", secret);
+            String qrUrl = OtpUtil.getQrCodeURL(userID, secret);
+            String encodedQrUrl = URLEncoder.encode(qrUrl, "UTF-8");
 
-        // 응답 HTML 페이지 작성
+            session.setAttribute("otpSecret", secret);
+
+            response.setContentType("text/html; charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
+                out.println("<!DOCTYPE html>");
+                out.println("<html><head><meta charset='UTF-8'><title>OTP 등록</title></head><body>");
+                out.println("<h2>OTP 앱 등록</h2>");
+                out.println("<p>Google Authenticator 앱에서 아래 QR코드를 스캔하세요.</p>");
+                out.println("<img src=\"https://quickchart.io/qr?text=" + encodedQrUrl + "&size=200\" alt=\"QR Code\">");
+                out.println("<p>또는 수동으로 입력: <b>" + secret + "</b></p>");
+                out.println("<p><a href='verifyOtp.jsp'>OTP 입력하기</a></p>");
+                out.println("</body></html>");
+            }
+
+        } catch (Exception e) {
+            logger.error("OTP 등록 처리 중 예외 발생", e);
+            showErrorPage(response, "OTP 등록 중 문제가 발생했습니다.");
+        }
+    }
+
+    private void denyAccess(HttpServletResponse response) throws IOException {
         response.setContentType("text/html; charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<script>alert('관리자만 접근할 수 있습니다.'); location.href='login.jsp';</script>");
+        } catch (IOException e) {
+            logger.error("denyAccess 응답 출력 실패", e);
+            throw e;
+        }
+    }
 
-        out.println("<!DOCTYPE html>");
-        out.println("<html><head><meta charset='UTF-8'><title>OTP 등록</title></head><body>");
-        out.println("<h2>OTP 앱 등록</h2>");
-        out.println("<p>Google Authenticator 앱에서 아래 QR코드를 스캔하세요.</p>");
-
-     // QR 코드 이미지 출력 (QR 코드 생성 URL에 인코딩된 URL 삽입)
-        out.println("<img src=\"https://quickchart.io/qr?text=" + encodedQrUrl + "&size=200\" alt=\"QR Code\">");
-        
-        // 수동 입력용 키 제공
-        out.println("<p>또는 수동으로 입력: <b>" + secret + "</b></p>");
-
-        // 다음 단계로 이동 링크
-        out.println("<p><a href='verifyOtp.jsp'>OTP 입력하기</a></p>");
-        out.println("</body></html>");
+    private void showErrorPage(HttpServletResponse response, String message) throws IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<html><body>");
+            out.println("<h2>오류</h2>");
+            out.println("<p>" + message + "</p>");
+            out.println("<a href='login.jsp'>돌아가기</a>");
+            out.println("</body></html>");
+        }
     }
 }
