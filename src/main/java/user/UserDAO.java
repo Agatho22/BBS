@@ -38,7 +38,12 @@ public class UserDAO implements AutoCloseable {
 
     @Override
     public void close() {
-        try { if (conn != null) conn.close(); } catch (SQLException e) { logger.warn("Connection 닫기 실패", e); }
+        try {
+            if (conn != null)
+                conn.close();
+        } catch (SQLException e) {
+            logger.warn("Connection 닫기 실패", e);
+        }
     }
 
     private void logAndThrow(String message, Exception e) {
@@ -51,7 +56,8 @@ public class UserDAO implements AutoCloseable {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hash = md.digest(password.getBytes("UTF-8"));
             StringBuilder sb = new StringBuilder();
-            for (byte b : hash) sb.append(String.format("%02x", b));
+            for (byte b : hash)
+                sb.append(String.format("%02x", b));
             return sb.toString();
         } catch (Exception e) {
             logAndThrow("hashSHA256 실패", e);
@@ -64,7 +70,8 @@ public class UserDAO implements AutoCloseable {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hash = md.digest((password + salt).getBytes("UTF-8"));
             StringBuilder sb = new StringBuilder();
-            for (byte b : hash) sb.append(String.format("%02x", b));
+            for (byte b : hash)
+                sb.append(String.format("%02x", b));
             return sb.toString();
         } catch (Exception e) {
             logAndThrow("getSHA256WithSalt 실패", e);
@@ -77,7 +84,8 @@ public class UserDAO implements AutoCloseable {
         byte[] salt = new byte[16];
         random.nextBytes(salt);
         StringBuilder sb = new StringBuilder();
-        for (byte b : salt) sb.append(String.format("%02x", b));
+        for (byte b : salt)
+            sb.append(String.format("%02x", b));
         return sb.toString();
     }
 
@@ -89,7 +97,9 @@ public class UserDAO implements AutoCloseable {
                 if (rs.next()) {
                     String dbPassword = rs.getString("userPassword");
                     String dbSalt = rs.getString("salt");
-                    String inputHash = (dbSalt == null || dbSalt.isEmpty()) ? hashSHA256(userPassword) : getSHA256WithSalt(userPassword, dbSalt);
+                    String inputHash = (dbSalt == null || dbSalt.isEmpty())
+                            ? hashSHA256(userPassword)
+                            : getSHA256WithSalt(userPassword, dbSalt);
                     return dbPassword.equals(inputHash) ? 1 : 0;
                 } else {
                     return -1;
@@ -167,7 +177,8 @@ public class UserDAO implements AutoCloseable {
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userID);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getInt("admin");
+                if (rs.next())
+                    return rs.getInt("admin");
             }
         } catch (SQLException e) {
             logAndThrow("adminCheck() 실패", e);
@@ -226,7 +237,8 @@ public class UserDAO implements AutoCloseable {
         }
     }
 
-    public int userUpdate(User user, String oldUserID, String salt) {
+    // [추가] 비밀번호 포함 사용자 정보 수정
+    public int userUpdateWithPassword(User user, String oldUserID, String salt) {
         String sql = "UPDATE USER SET userID = ?, userPassword = ?, userName = ?, userEmail = ?, admin = ?, salt = ? WHERE userID = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, user.getUserID());
@@ -238,7 +250,23 @@ public class UserDAO implements AutoCloseable {
             pstmt.setString(7, oldUserID);
             return pstmt.executeUpdate();
         } catch (SQLException e) {
-            logAndThrow("userUpdate() 실패", e);
+            logAndThrow("userUpdateWithPassword() 실패", e);
+            return -1;
+        }
+    }
+
+    // [추가] 비밀번호 없이 사용자 정보만 수정
+    public int userUpdateWithoutPassword(User user, String oldUserID) {
+        String sql = "UPDATE USER SET userID = ?, userName = ?, userEmail = ?, admin = ? WHERE userID = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, user.getUserID());
+            pstmt.setString(2, user.getUserName());
+            pstmt.setString(3, user.getUserEmail());
+            pstmt.setInt(4, "admin".equals(user.getAdmin()) ? 1 : 0);
+            pstmt.setString(5, oldUserID);
+            return pstmt.executeUpdate();
+        } catch (SQLException e) {
+            logAndThrow("userUpdateWithoutPassword() 실패", e);
             return -1;
         }
     }
@@ -251,7 +279,8 @@ public class UserDAO implements AutoCloseable {
                 if (rs.next()) {
                     String dbPassword = rs.getString("userPassword");
                     String salt = rs.getString("salt");
-                    String inputHash = (salt == null || salt.isEmpty()) ? hashSHA256(userPassword) : getSHA256WithSalt(userPassword, salt);
+                    String inputHash = (salt == null || salt.isEmpty()) ? hashSHA256(userPassword)
+                            : getSHA256WithSalt(userPassword, salt);
                     if (dbPassword.equals(inputHash)) {
                         String deleteSQL = "DELETE FROM USER WHERE userID = ?";
                         try (PreparedStatement deletePstmt = conn.prepareStatement(deleteSQL)) {
@@ -288,7 +317,8 @@ public class UserDAO implements AutoCloseable {
             pstmt.setString(1, name);
             pstmt.setString(2, email);
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) return rs.getString("userID");
+                if (rs.next())
+                    return rs.getString("userID");
             }
         } catch (SQLException e) {
             logAndThrow("findUserID() 실패", e);
@@ -307,4 +337,25 @@ public class UserDAO implements AutoCloseable {
             return false;
         }
     }
-} 
+
+    public User getUserByID(String userID) {
+        String sql = "SELECT userID, userName, userEmail, admin FROM USER WHERE userID = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, userID);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    User user = new User();
+                    user.setUserID(rs.getString("userID"));
+                    user.setUserName(rs.getString("userName"));
+                    user.setUserEmail(rs.getString("userEmail"));
+                    user.setAdmin(rs.getInt("admin") == 1 ? "admin" : "user");
+                    return user;
+                }
+            }
+        } catch (SQLException e) {
+            logAndThrow("getUserByID() 실패", e);
+        }
+        return null;
+    }
+
+}
