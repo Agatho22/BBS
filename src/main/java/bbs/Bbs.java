@@ -8,7 +8,7 @@ public class Bbs {
     private String bbsDate;
     private String bbsContent;
     private int bbsAvailable;
-    private String isSecret; // 비밀글 여부 필드 추가
+    private String isSecret; // ✅ 비밀글 여부 필드 추가
 
     public int getBbsID() {
         return bbsID;
