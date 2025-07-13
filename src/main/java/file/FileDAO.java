@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import exception.DataAccessException;
+
 public class FileDAO implements AutoCloseable {
     private static final Logger logger = LogManager.getLogger(FileDAO.class);
     private Connection conn;
@@ -197,5 +199,29 @@ public class FileDAO implements AutoCloseable {
         }
 
         return fileList;
+    }
+    
+    public FileDTO getFile(int bbsID) {
+        String sql = "SELECT bbsID, fileName, fileRealName, NULL AS mimeType, " +
+                     "LENGTH(LOAD_FILE(CONCAT('/upload/', fileRealName))) AS size " +
+                     "FROM FileBbsMapping WHERE bbsID = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, bbsID);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return new FileDTO(
+                        rs.getInt("bbsID"),
+                        rs.getString("fileName"),
+                        rs.getString("fileRealName"),
+                        rs.getString("mimeType"),
+                        rs.getLong("size")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            logger.error("파일 조회 중 오류", e);
+            throw new DataAccessException("파일 조회 중 DB 오류 발생", e);
+        }
+        return null;
     }
 }
