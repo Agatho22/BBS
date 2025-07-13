@@ -1,14 +1,13 @@
 package bbs;
 
 import user.UserDAO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 @WebServlet("/deleteBbs")
 public class DeleteBbsServlet extends HttpServlet {
@@ -22,7 +21,7 @@ public class DeleteBbsServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
-        try (PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {  // printWriter 자동 닫기 처리
 
             HttpSession session = request.getSession();
             String userID = (String) session.getAttribute("userID");
@@ -44,20 +43,27 @@ public class DeleteBbsServlet extends HttpServlet {
             try {
                 bbsID = Integer.parseInt(bbsIDParam);
             } catch (NumberFormatException e) {
-                logger.warn("bbsID 파싱 실패: " + bbsIDParam, e);
+                logger.warn("bbsID 파싱 실패: {}", bbsIDParam, e);
                 out.println("<script>alert('유효하지 않은 글입니다.'); location.href='bbs.jsp';</script>");
                 return;
             }
 
-            UserDAO userDAO = new UserDAO();
-            int adminCheckResult = userDAO.adminCheck(userID);
-            if (adminCheckResult == 0) {
-                logger.warn("비관리자 사용자({})가 글 삭제 시도", userID);
-                out.println("<script>alert('권한이 없습니다.'); location.href='adminBbs.jsp';</script>");
+            // 수정: UserDAO를 try-with-resources로 감싸서 리소스 누수 방지
+            try (UserDAO userDAO = new UserDAO()) {
+                int adminCheckResult = userDAO.adminCheck(userID);
+                if (adminCheckResult == 0) {
+                    logger.warn("비관리자 사용자({})가 글 삭제 시도", userID);
+                    out.println("<script>alert('권한이 없습니다.'); location.href='adminBbs.jsp';</script>");
+                    return;
+                }
+            } catch (Exception e) {
+                // 수정: UserDAO 예외 처리 추가
+                logger.error("UserDAO 예외 발생", e);
+                out.println("<script>alert('권한 확인 중 오류가 발생했습니다.'); history.back();</script>");
                 return;
             }
 
-            try (BbsDAO bbsDAO = new BbsDAO()) {
+            try (BbsDAO bbsDAO = new BbsDAO()) {  // 기존에도 리소스 자동 닫기 적용됨
                 int result = bbsDAO.delete(bbsID);
                 if (result == -1) {
                     logger.error("글 삭제 실패: bbsID={}", bbsID);
@@ -72,6 +78,7 @@ public class DeleteBbsServlet extends HttpServlet {
             }
 
         } catch (IOException e) {
+            // 예외 포장하여 서블릿 컨테이너로 전달
             logger.fatal("응답 스트림 처리 중 오류 발생", e);
             throw new ServletException("응답 출력 중 오류 발생", e);
         }
