@@ -11,7 +11,7 @@ import bbs.Bbs;
 import bbs.BbsDAO;
 import user.UserDAO;
 
-@WebServlet("/updateAdminBbs")
+@WebServlet("/admin/updateAdminBbs")
 public class AdminBbsUpdateActionServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
