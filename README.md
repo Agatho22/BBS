@@ -55,12 +55,8 @@ JSP 기반의 웹 게시판 프로젝트입니다.
 ```프로젝트 디렉토리 구조
 
 BBS/
-├── .gitignore                       # Git이 무시할 파일 목록
-├── README.md                        # 프로젝트 설명 문서
 ├── db.properties                    # DB 접속 설정 파일
 ├── log4j2.xml                       # Log4j2 로깅 설정 파일
-├── passwd.pub                       # 공개 키 (예시)
-├── passwd2                          # 기타 인증 관련 키 파일 (예시)
 │
 ├── src/
 │   └── main/
