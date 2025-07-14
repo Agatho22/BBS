@@ -3,69 +3,99 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>회원 탈퇴 확인</title>
+    <title>회원 탈퇴</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
+            justify-content: center;
+            align-items: center;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 350px;
+
+        .withdraw-box {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 380px;
             text-align: center;
+            animation: fadeIn 0.6s ease-in-out;
         }
-        input[type="password"] {
+
+        .withdraw-box h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .withdraw-box p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .withdraw-box input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin-top: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-        button {
+            padding: 12px;
             margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .withdraw-box button {
             width: 100%;
-            padding: 10px;
-            background-color: #d9534f;
-            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: #fff;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
+            font-size: 15px;
             font-weight: bold;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #c9302c;
+
+        .withdraw-box button:hover {
+            background-color: #c0392b;
         }
-        .cancel {
-            margin-top: 10px;
-            display: inline-block;
+
+        .withdraw-box .cancel-link {
+            display: block;
+            margin-top: 15px;
             color: #555;
+            font-size: 13px;
             text-decoration: none;
-            font-size: 14px;
         }
-        .cancel:hover {
+
+        .withdraw-box .cancel-link:hover {
             text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>회원 탈퇴 확인</h2>
-        <p>탈퇴를 위해 비밀번호를 다시 입력해주세요.</p>
-        <!-- 탈퇴 처리 form: POST 방식으로 userDeleteAction.jsp로 전송 -->
-        <form action="userDeleteAction" method="post">
-        	<!-- 비밀번호 입력 필드 (required: 미입력 시 전송 안 됨) -->
-            <input type="password" name="userPassword" placeholder="비밀번호 입력" required>
-            <button type="submit">회원 탈퇴</button>
-        </form>
-        <a href="main.jsp" class="cancel">취소하고 돌아가기</a>
-    </div>
+
+<div class="withdraw-box">
+    <h2><i class="fas fa-user-times"></i> 회원 탈퇴</h2>
+    <p>비밀번호를 입력하시면 탈퇴가 진행됩니다.</p>
+    
+    <form action="userDeleteAction" method="post">
+        <input type="password" name="userPassword" placeholder="비밀번호" required>
+        <button type="submit">탈퇴하기</button>
+    </form>
+    
+    <a href="main.jsp" class="cancel-link">취소하고 돌아가기</a>
+</div>
+
 </body>
 </html>

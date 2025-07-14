@@ -11,138 +11,26 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+<link rel="stylesheet" href="css/admin_write_style.css">
+<!-- 외부 CSS -->
 
-<title>JSP 게시판 웹 사이트</title>
+<title>관리자 글 작성 페이지</title>
 <style>
-body {
-	font-family: 'Noto Sans KR', sans-serif;
-	background-color: #111;
-	color: #fff;
-}
-
-.navbar {
-	background-color: #000;
-}
-
-.navbar-brand, .nav-link {
-	color: #fff !important;
-}
-
-.navbar-brand {
-	font-weight: bold;
-}
-
-.nav-link {
-	margin-right: 20px;
-}
-
-.dropdown-menu {
-	background-color: #000;
-}
-
-.dropdown-item {
-	color: #fff;
-}
-
-.jumbotron {
-	background-color: #111;
-	color: #fff;
-	text-align: center;
-}
-
-.jumbotron h1 {
-	font-size: 3rem;
-	font-weight: bold;
-}
-
-.btn-primary {
-	background-color: #fff;
-	color: #000;
-	border: none;
-}
-
-.btn-primary:hover {
-	background-color: #ccc;
-}
-
-.form-control {
-	border-radius: 10px;
-	background-color: #222;
-	color: #fff;
-	border: 1px solid #444;
-}
-
-.form-control::placeholder {
-	color: #888;
-}
-
-.form-control:focus {
-	background-color: #333;
-	border-color: #555;
-	outline: none;
-	box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-.footer {
-	text-align: center;
-	padding: 20px 0;
-	background-color: #000;
-}
-
-.form-container {
-	background-color: #222;
-	border-radius: 10px;
-	padding: 30px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
 </style>
 </head>
 <body>
 	<%
-    String userID = (String) session.getAttribute("userID");
+	String userID = (String) session.getAttribute("userID");
 
-    // 로그인 안 한 경우 or 관리자(admin) 아닌 경우 차단
-    if (userID == null || !userID.equals("admin")) {
-        response.sendRedirect("main.jsp");
-        return;
-    }
-%>
+	// 로그인 안 한 경우 or 관리자(admin) 아닌 경우 차단
+	if (userID == null || !userID.equals("admin")) {
+		response.sendRedirect("main.jsp");
+		return;
+	}
+	%>
 
-	<!-- 네비게이션 바 -->
-	<nav class="navbar navbar-expand-lg navbar-dark">
-		<div class="container">
-			<a class="navbar-brand" href="adminMain.jsp"> <img
-				src="flower.jpg" alt="Admin page" style="height: 30px;">
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarNav" aria-controls="navbarNav"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="adminUser.jsp">회원
-							관리</a></li>
-					<li class="nav-item"><a class="nav-link" href="adminBbs.jsp">게시판
-							관리</a></li>
-				</ul>
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">메뉴</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<% if (userID == null) { %>
-							<a class="dropdown-item" href="login.jsp">로그인</a> <a
-								class="dropdown-item" href="join.jsp">회원가입</a>
-							<% } else { %>
-							<a class="dropdown-item" href="logoutAction.jsp">로그아웃</a>
-							<% } %>
-						</div></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<jsp:include page="includes/admin_nav.jsp" /><!-- 네비게이션 바 -->
+
 	<div class="container mt-5">
 		<div class="row">
 			<form method="post" action="file/writeActionServlet"

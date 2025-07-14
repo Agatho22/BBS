@@ -1,0 +1,96 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.custom-form-container {
+    margin-top: 60px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-jumbotron {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+h3.text-center {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    height: 45px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 관리자 여부 스위치 스타일 */
+.radio-container {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+.radio-container .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.radio-container .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.radio-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.radio-container input:checked + .slider {
+    background-color: #007bff;
+}
+
+.radio-container input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #343a40;
+    color: white;
+}

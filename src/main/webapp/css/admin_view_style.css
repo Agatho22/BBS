@@ -1,0 +1,35 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+.navbar {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+}
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: #ccc !important;
+}
+.table th, .table td {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+.btn-primary {
+    background-color: #444;
+    color: #fff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #555;
+}
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+}

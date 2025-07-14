@@ -57,3 +57,21 @@ a, a:hover {
 	justify-content: flex-end;
 	margin-top: 20px;
 }
+#drop-zone {
+            border: 2px dashed #cccccc;
+            padding: 30px;
+            text-align: center;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+        #drop-zone.bg-light {
+            background-color: #e2e6ea;
+        }
+        #file-preview {
+            margin-top: 15px;
+            text-align: center;
+        }
+        #file-preview img {
+            max-width: 200px;
+            max-height: 200px;
+        }

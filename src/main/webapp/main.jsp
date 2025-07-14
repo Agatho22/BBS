@@ -70,57 +70,7 @@ body {
 	}
 	%>
 
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="main.jsp">JSP Board</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="main.jsp">Home</a></li>
-			
-				<li class="nav-item active"><a class="nav-link" href="bbs">Board</a></li>
-			</ul>
-			<ul class="navbar-nav ml-auto">
-				<%
-				// 로그인 여부에 따라 Account 메뉴와 Sign In 메뉴를 구분해서 출력
-				if (userID == null) {
-				%>
-				<!-- 로그인하지 않은 사용자에게는 로그인 메뉴만 보여줌 -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Sign In </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="login.jsp">Login</a>
-					</div></li>
-				<%
-				} else {
-				%>
-				<!-- 로그인한 사용자에게는 Account 메뉴 보여줌 -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Account </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<!-- 로그아웃 메뉴 항목 -->
-						<a class="dropdown-item" href="logoutAction.jsp">Logout</a>
-						<!-- [추가된 부분] 비밀번호 변경 페이지로 이동하는 메뉴 항목 -->
-						<!-- 로그인한 사용자만 볼 수 있으며, changePassword.jsp로 이동함 -->
-						<a class="dropdown-item" href="changePassword.jsp">Change
-							Password</a>
-						<!-- 계정 삭제 메뉴 항목, 삭제 전 확인 알림 표시 -->
-						<a class="dropdown-item" href="userDelete.jsp?userID=<%=userID%>"
-							onclick="return confirm('정말로 계정을 삭제하시겠습니까?');">Delete ID</a>
-					</div></li>
-				<%
-				}
-				%>
-			</ul>
-		</div>
-	</nav>
+	<jsp:include page="includes/user_nav.jsp" />
 
 	<!--  Bootstrap 필수 스크립트 -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
