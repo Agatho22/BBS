@@ -4,6 +4,8 @@
 <%@ page import="util.HtmlUtil"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.UUID"%>
+
+
 <%
     // CSRF 토큰이 없으면 생성
     if (session.getAttribute("csrfToken") == null) {
@@ -36,7 +38,7 @@
     String csrfToken = (String) session.getAttribute("csrfToken");
 %>
 
-	<jsp:include page="includes/user_nav.jsp" />
+	<jsp:include page="/includes/user_nav.jsp" />
 
 	<div class="container mt-4">
 
