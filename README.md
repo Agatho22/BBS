@@ -1,6 +1,6 @@
-#  BBS - JSP 게시판 시스템
+#   서버 구축 & 게시판 사이트 구축 & 취약점 진단
 
-JSP 기반의 웹 게시판 프로젝트입니다.  
+웹 게시판 프로젝트입니다.  
 회원가입, 로그인, 게시글 등록/수정/삭제, 파일 업로드, 관리자 페이지, OTP 인증 등 다양한 기능을 포함하고 있으며, **보안 취약점 보완**을 중점으로 설계되었습니다.
 
 ---
@@ -62,12 +62,21 @@ BBS/
 │   └── main/
 │       ├── java/
 │       │   ├── admin/
-│       │   │   └── AdminBbsUpdateCheckServlet.java  # 관리자 게시글 수정 권한 확인 서블릿
+│       │   │   ├── AdminBbsUpdateActionServlet.java  
+│       │   │   ├── AdminBbsUpdateCheckServlet.java   # 관리자 게시글 수정 권한 확인 서블릿
+│       │   │   ├── AdminDeleteReplyServlet.java
+│       │   │   ├── AdminDeleteUserServlet.java
+│       │   │   ├── AdminEditServlet.java
+│       │   │   ├── AdminResetPasswordServlet.java
+│       │   │   ├── AdminUserEditServlet.java
+│       │   │   └── AdminUserUpdateServlet.java
 │       │   ├── bbs/
 │       │   │   ├── Bbs.java                          # 게시글 모델 클래스
 │       │   │   ├── BbsDAO.java                       # 게시판 DB 접근 로직
 │       │   │   ├── BbsUpdateServlet.java             # 게시글 수정 처리 서블릿
-│       │   │   └── DeleteBbsServlet.java             # 게시글 삭제 처리 서블릿
+│       │   │   ├── DeleteBbsServlet.java             # 게시글 삭제 처리 서블릿
+│       │   │   ├── DeleteMyBbsServlet.java           # 
+│       │   │   └── ValidateBbsAccessServlet.java     # 
 │       │   ├── controller/
 │       │   │   └── BbsListServlet.java               # 게시글 목록 조회 컨트롤러
 │       │   ├── file/
