@@ -257,6 +257,7 @@ SBOM (CycloneDX 1.6)
   - 취약점 진단 도구(SCA)를 통한 소스코드 내 오픈소스 CVE 취약점 확인
 
 CycloneDX 1.6 JSON 
+
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
 
