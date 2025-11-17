@@ -247,8 +247,8 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
 다만, CSRF 방어 미적용 항목은 추후 개선 예정 입니다.
 
-SBOM (CycloneDX 1.5)
-해당 프로젝트는 CycloneDX 1.5에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 구조적으로 기술했습니다.
+SBOM (CycloneDX 1.6)
+해당 프로젝트는 CycloneDX 1.6에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 구조적으로 기술했습니다.
 
 목적
 
@@ -256,4 +256,5 @@ SBOM (CycloneDX 1.5)
 
   - 취약점 진단 도구(SCA)를 통한 소스코드 내 오픈소스 CVE 취약점 확인
 
+CycloneDX 1.6 JSON 
 
