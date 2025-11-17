@@ -260,4 +260,9 @@ CycloneDX 1.6 JSON
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
+Sparrow SCA SBOM 보고서 (엑셀)
+
+https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_%EB%B3%B4%EA%B3%A0%EC%84%9C.xlsx
+
+
 
