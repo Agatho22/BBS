@@ -1,0 +1,3052 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "fe5ed8fa-68ce-3534-b5e4-9e26402ee500",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-11-17T06:02:34Z",
+    "authors" : [
+      {
+        "name" : "finss_sw2"
+      }
+    ],
+    "component" : {
+      "type" : "application",
+      "name" : "test_3"
+    }
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "4143fe0d-c5dc-47c8-975b-17d1248587f7",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "@buttercup/importer",
+      "version" : "3.0.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "9ce04e34240f674bc72680f8b843b1457383161a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "14349c1ba651bb8aa651e33bf1e51cddf147165f"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:npm/%40buttercup/importer@3.0.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "fb234c67-7272-4c26-82ad-82c7cf834fcf",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.conversantmedia:disruptor",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.conversantmedia/disruptor"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "e1a94ab9-fe50-4366-9993-6ec6800e7c18",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.core:jackson-core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "16992d17-111b-4113-8a44-fed671aa1685",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.core:jackson-databind",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "bf4f7c28-c5c9-4da1-8fb3-1905b254d9cb",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-xml"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "1bde8ce7-8861-4299-a9b8-5af14911edba",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "5bcd07c4-e75c-4787-830c-f34af3b281e2",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.lmax:disruptor",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.lmax/disruptor"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "e7f476da-fb99-4f0f-b9eb-4229b5fcf6ef",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.mysql:mysql-connector-j",
+      "version" : "8.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "b1bc0f47bcad26ad5f9bceefb63fcb920d868fca"
+        }
+      ],
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.mysql/mysql-connector-j@8.4.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "64791206-1653-4cac-9ae9-b8196d4102fd",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.sun.mail:javax.mail",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.sun.mail/javax.mail"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "68990a40-1d6f-450e-804e-b68eacd5ba30",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.tencentcloudapi:tencentcloud-sdk-java-cdn",
+      "version" : "3.1.228",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "a27082684a2ff0bf397666c3943496c44541d1ca"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "667db307f9a672fa38ba31ace29216ddc18c20fc"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0b6792d0bcb448ef94fe36de7ce46ff0beb47b1e"
+        }
+      ],
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.tencentcloudapi/tencentcloud-sdk-java-cdn@3.1.228"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "a172c5e6-60f5-4902-a9fa-04192c4ea0e2",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.warrenstrange:googleauth",
+      "version" : "1.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "af79f2f98f3f6e9930802f7e03f51fa709437565"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b5f2385d1e5f86f40ae1fceb6406e21a1cb36cb3"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://spdx.org/licenses/BSD-3-Clause.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/com.warrenstrange/googleauth@1.4.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "b96efbb1-d326-42fd-9aea-463ec66a4c12",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "commons-codec:commons-codec",
+      "version" : "1.11",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "3acb4705652e16236558f0f4f2192cc33c3bd189"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8a0430c3138ce4a23b0b6c7b7409df54bb76feb9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bce4ba84fd527950e35040b20a991c63e90e2850"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/commons-codec/commons-codec@1.11"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "8bac2485-2a1a-4d1f-9a8a-65ab2a10c0e0",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "commons-codec:commons-codec",
+      "version" : "1.9",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "3f15fff45d57656685abfee9e8302bf14580044c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "36b5cdaabc3114cc74759fcadfc4af6a9c41b3f5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9ce04e34240f674bc72680f8b843b1457383161a"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/commons-codec/commons-codec@1.9"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "51e6b163-3b0e-431c-8302-b5a0e9ab7cab",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.activation:javax.activation-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.activation/javax.activation-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "28db0c2d-caf8-411a-9e10-c1ca05ece077",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.jms:javax.jms-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.jms/javax.jms-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "5ec7fb24-f600-4e19-b9c8-a4df73903c2d",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.mail:javax.mail-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.mail/javax.mail-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "ed412cf4-5d57-420c-a14f-5425d5790124",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "javax.servlet:javax.servlet-api",
+      "version" : "4.0.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "49a9da44db6e6b5f44ce15ddfcfe2b6666151b25"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a27082684a2ff0bf397666c3943496c44541d1ca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "CDDL-1.1",
+            "url" : "https://spdx.org/licenses/CDDL-1.1.html"
+          }
+        },
+        {
+          "license" : {
+            "id" : "CDDL-1.0",
+            "url" : "https://spdx.org/licenses/CDDL-1.0.html"
+          }
+        },
+        {
+          "license" : {
+            "id" : "GPL-2.0-with-classpath-exception",
+            "url" : "https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/javax.servlet/javax.servlet-api@4.0.1"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "f41beda9-d336-4895-96a9-ad18f922c1a1",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "junit:junit",
+      "version" : "4.11",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "4e031bb61df09069aeb2bffb4019e7a5034a4ee0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "28e0ad201304e4a4abf999ca0570b7cffc352c3c"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "CPL-1.0",
+            "url" : "https://spdx.org/licenses/CPL-1.0.html"
+          }
+        },
+        {
+          "license" : {
+            "id" : "CPAL-1.0",
+            "url" : "https://spdx.org/licenses/CPAL-1.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/junit/junit@4.11"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "a5bc3787-c0e6-4316-825e-769dcf1beb98",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "junit:junit",
+      "version" : "4.12",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "2973d150c0dc1fefe998f834810d68f278ea58ec"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "EPL-1.0",
+            "url" : "https://spdx.org/licenses/EPL-1.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/junit/junit@4.12"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "66f54a25-8d81-49a8-90b9-7964f7a346f6",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.commons:commons-compress",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.commons/commons-compress"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "038be71d-50c1-4267-9f45-9bc83a1c60c8",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.commons:commons-csv",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.commons/commons-csv"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "0c58c739-fd61-4c3d-9d05-17a22bdff06a",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "org.apache.httpcomponents:httpclient",
+      "version" : "4.5.3",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "d1577ae15f01ef5438c5afc62162457c00a34713"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4969730c661fff76fa7f9d4c7c61545817f5b033"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ba2c3d7d3a2ec43abbb832c60f46e333e6624723"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.3"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "febb39f3-15d9-47c7-a0bc-66f3da50e862",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.kafka:kafka-clients",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.kafka/kafka-clients"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "987be3c7-a2ab-473f-85b0-901879af925e",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "7764e33c-83da-4914-a3b8-5807c3e2b896",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-api",
+      "version" : "2.25.0",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "1ca44d97-9800-444d-81eb-220e01c93e98",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-core",
+      "version" : "2.25.0",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "25b8c6a1-1cec-4ec3-bab8-739971244062",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.jctools:jctools-core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.jctools/jctools-core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "b37bc1a1-346a-4819-b712-2b66ffc9d921",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.jspecify:jspecify",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.jspecify/jspecify"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "e8ec767d-546a-495c-9f1d-1a8a5d4b0be5",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.osgi:org.osgi.core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.osgi/org.osgi.core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "7a214d1a-b6ad-4b23-a05e-cbf35136d9b6",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.zeromq:jeromq",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.zeromq/jeromq"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "a90cb401-465f-465b-a782-6d2d970deb40",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.0-3.3.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "537c9e08eb02ca46eb8ad0489ce2b65dcf929593"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "aafafdc09404c4aa4447d7e898a2183def9cc1b1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "35e0b4e5ac71901d9919b1a32b5ae69cc660d470"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f3a9a3b609133c3d21d6b42abbf7f43bd111df72"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "dfb8410ffc10a57d69b81620087c5a0b6027765a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9e9b88fcccec2a52b7b8d769ebde0d14fe3ae443"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "02ec63c7ae947e371eeedf8152b0f9222d6d20eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0db6bb80f60f960ecd103874dc376805ea411d6"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "22037a3455914e5662fa51a596677bdb329e2c5c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1dadc506590e60b7869bc86d72fc11bd2ec7e47c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8a5931dc907502804ed516563834ce448bd4df88"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "55a235b3497c05c7bf47134728dda952d468a501"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ac5bef58aa31df5ddac8643301b57e94308495be"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ebda3d2d73925feb52a464bc46e774c4ac6e8e7c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "66b1fc67e37d01ee45ca75c4eefb144d2dbe98fa"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.0-3.3.0?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "92821eee-4e7d-432d-97dc-5285c26e8b74",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.1-3.3.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "d1e442d1215115bd01aec04b00e0537694df8f6d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "75a138069e6333d953821305e2e8421c3fd57b88"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "73ce6cc884116ab9295bcdf7482ef236842d274e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5ada7c103fc1deabc925cc1fdbbb6e451c21fc70"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "852c5747d5c52be833b5a5c2b97920b4236ec4c4"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7cf877cff73b72df79eec4ede7d7a532503ad9aa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "afa7af2bc7cbe37eeccb9b65577744c08219c5a9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "22037a3455914e5662fa51a596677bdb329e2c5c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ebd6d82902769a8a2091ddc840ae75ab8bc88840"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "66b1fc67e37d01ee45ca75c4eefb144d2dbe98fa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8bec1bba3e23ecba22cffb197a2d440af410b15d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f3a9a3b609133c3d21d6b42abbf7f43bd111df72"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "417669d8044f5a36d03de348e04e01805684d479"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0b53e330c67cd6f8551b7dc12e033b31e4ab1bdb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "aafafdc09404c4aa4447d7e898a2183def9cc1b1"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.1-3.3.1?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "600281dd-d87b-4f7a-866e-c81c7afcf0c5",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.2-3.3.2",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "890b3e33471dbbbcc2160f2a366402a89f5543df"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ccb7ff3435bb5cff1fe9643fc0ac8cdde2dcd177"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "815675548997eadc98fc4beb1b698b35c2d5c5cb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b3f2ef9f985e7906c9360756b73cd64bf7733647"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "abc623b6964a0f33d23eddcdcc8ec08d8c26cb04"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "973e37a8502921d56bc02bb55321f45b072b6f71"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f8752e9ae24daec0a0baffd7819122f8c6fd9103"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5009e973465fbe2477b22e4dcd1041e6bb385c21"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "41c54bf695145ae0b4d9020a1da308ceb05dcaf3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ce7356fb1a495ffd359e85ecb4268d6b5f48bf2b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "36f0fd5cb451590d055b38f6afad8c69f74bfc9a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.2-3.3.2?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "0d5c95cc-76ad-4f46-b4a5-70c21704d732",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.4-3.3.4",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "2e1d08a9694cd5a694eabca746cfad95fb99653e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f63d04f8b4f18f9169b812503a2ab8d158b06b04"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "542cfd539f0cad650342c8cab8baf1cdbcd5fea6"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ed29315e0ffb3f14382431f2724235bf67f44eb3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f2183455571b19311a235bd5aa204e694ade8e94"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ccb7ff3435bb5cff1fe9643fc0ac8cdde2dcd177"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "58592aeaaaa2f4243dfbf7639359f869b4e6d0fe"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "27947c0c0fa837da9bdfdfc36f649c25f54bd1c0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a22e254bf086bf442a09344afe0e6cf188f5a1d5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1b589b11cf6c617024a86a18ed0c3febb0e6675d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "fc6b4268fbd57ad95d2b41a1d4d6866f222fbdb2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.4-3.3.4?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "55869f01-a5cc-4852-9d87-15cd3692dc12",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.5-3.3.5",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6c264e0e0026ab5ece49350c6a8812398e696cbb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6987e3bdad7a3a5d143ddf2453e29782dbd99c29"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bbf55e20f1ebb6368522799f29db39830a08ef93"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ecf2245dd39ea3b17ccb4bea42cda46356376078"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "aaf29eacf7e00a1a23e734d35a6d534ad0dfe2c7"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4c936da026b2fb2e6b63d3d4ddbc3d9beb658d17"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "df1fb0577d2fc767a7d2de70c38c12092d8a369a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "abc2e3a1163de52378c71bb92d007c22abb0a393"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "08df9a96752852f2cbd310c30facd934e348c2c5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "16506513c5f3d95982e73fb6820cf3c4c58d6897"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3dd689b9f7f1457008a33f47966c59a24e3e8415"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.5-3.3.5?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "6f0d2a6b-0ef6-4ada-bbd4-685f0d6b2bf0",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.6-3.3.6",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "6c3f0c97a5c7e1ef6453d6b64e875b5eb141d397"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4316dcfb54e1b0a428e1d37203a4028fd0408298"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8eb176c70b9cfa6871b76d6dc98fb526e7e9b3de"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "791aa054a026bddc0de92bad6cf7a1c6e73713d5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c6117ef3389dd4858d557cffccdfffcfdda1cc0f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "dab9ed92419da5dab0464a0f42ab2ddc91de5c39"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b40b372d32575cbe43f62d92abf244e1e5033b2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "95fb9d7b83bebc9c37cefee87514f5979ee8785d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "85cacfd84a6258ed0e193874efa31c87f86b9e87"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bcb96e31a2b8fed5575995fa0c58293e64972116"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "29d019dd007929a57c564b2b85785e4e12e58db2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "55253bf57e974dc89014e57783a1a4c737e7c867"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3288309cc01d4abc4691a53adc3818f59a3e984b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8cf4186ce86777b4b408ce308ca9f66dd421f509"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.6-3.3.6?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "24d51b76-d575-4ead-a9b3-bbe51bd1736d",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.10",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c0f4cf7d488a5cbbded4fd1c39c294d4eb779af3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0701852ac725012258ac9f962027841c3c05af4e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8ea901312737d6c00457c53061d7a0cb2d0ae684"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "11570e7c626db90d42f0ab6b2cd73d94f5d82b8c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.10?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "cbb1f82b-351f-4883-bfab-c941c007262f",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.11",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c699ef2366c3689e1256e61753f48668c9d575b4"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f4d7389a6fbda2083fa5e3458c0f397b18beee6b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b67480ea674acda89e001b7f0282209e339e00c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "53d1b24f59509cb05ed36e55454fab6ce02a7d9e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.11?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "dc487d27-1806-4cdb-b92a-2c04cd64aed0",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.12",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "2b1eb12af94a71850026cb299a329d1a280ff388"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "20ed048e4d37af376cfddeb5b6f15f63cf78e7a9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3da1c9fbd9165186905628a365f16169a94e1994"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7201eacd36906211b776b83e63f4c7b874ec8457"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.12?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "6d109587-4aff-4bec-a73f-4f0527747361",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.13",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c08ca341042e7476126161b561623c033044b085"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9ad57f895656bc4c9f02d9b6d067599f3fac36a4"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0feb5f2a19c2259dedf801bc91b62c7bb73ac994"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "85f2917f6e909f9ebde53cbdc29355d8f74fcb0a"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.13?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "5a2e63d6-445f-4b73-8617-91c078d5a358",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.7",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "072d061f5ee916167f1dc98c546e2791f41aea1d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "56cfb56ade06db5b66fe89e92a2f76051e5c44c7"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8b9e582ced6aa10c307576dd252c41e9d6b05112"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "168e7f05942f6f218dad741beeda8f4a15a4a1c7"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7ba80716cf3130eb3677ee339cd2eb11d0af084a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.7?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "6ec5164a-90f1-44b4-802c-1920b385935a",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.8",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9d3ddba2135164aa3e864c27160fdea65ec87a53"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "116b31d99c25a2ac00db96d8ce7eb06b8e7d1a9c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca888732791c58f5a1a395ddc904cbfececd6696"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "fa6593b3de6be8db8121ef6b5b5df25ca44109e0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.8?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "335cdc7c-c9d1-4c3d-86ee-0e02070571de",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.3.7-3.3.9",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c22cbac48ad82121a403e61c709d58d4aa78251d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "db813b2fcc816d80570eaef8ceaf9b6a3c8a8f31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "06d4bd24a6b19d6e95344b6cdaf600d11dc403cc"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "efec5f570452786228c158053e693adc895a7923"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.3.7-3.3.9?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "fb2a4ed4-226d-4b7a-baaa-1e787c79abea",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.4.0-3.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "5cd66a9a8e12605ab173f3b79eb1caca6e3e2499"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "47b894ffa73197d69d22959400934b2199df7170"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "38a09351efd71b300b2c9e3a1c0a3af191e7856c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7b6da59686964ae3dbff87da24c997e92f560415"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "cb1ce50f841b122f2481ce4f02c170fcdad83783"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "01cbf828521a02f4ff52dda884b6dd3f360f0c46"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "47ddf09ecdeb7ef9c105e0a626c5b159e1bb64e1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "369a832ef7f8a57e9b59b84b181fdb4fc9125050"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "13c97b997df4ea0d6f3a022b9e92941d63533e1c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a820070e7ebb07f717641ea35fc839820c0b74b0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "358e190d6078c6ea49f0046bf81bfec56eb03fa5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "88be90bfb9615db1ef0739a0ae5eece31d826592"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9fa2bda3c1c5737db82073c722aadb4cd91f4e6b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6ddfefd8797c91f0308ef28afb039c3f8b3c7d0b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.4.0-3.4.0?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "dca474d3-7822-4de3-ac0c-276971231b09",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "todc-bootstrap",
+      "version" : "3.4.0-3.4.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "13c97b997df4ea0d6f3a022b9e92941d63533e1c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "47ddf09ecdeb7ef9c105e0a626c5b159e1bb64e1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a820070e7ebb07f717641ea35fc839820c0b74b0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "358e190d6078c6ea49f0046bf81bfec56eb03fa5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "369a832ef7f8a57e9b59b84b181fdb4fc9125050"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7b6da59686964ae3dbff87da24c997e92f560415"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9fa2bda3c1c5737db82073c722aadb4cd91f4e6b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "cf3ce1911e6c70dfd4c500e0dd73884b77a27a08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "d4e0ba137a2633106e9032e917679d8e8b63354c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1165111e8c4ca33e490099d77265e8c22b0a29da"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c721144d12fdab5fa190b968f5650f90a7308c40"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5fd3b9778341db0198c8bdbd12785e90d2a1775b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5cd66a9a8e12605ab173f3b79eb1caca6e3e2499"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "01cbf828521a02f4ff52dda884b6dd3f360f0c46"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "47b894ffa73197d69d22959400934b2199df7170"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/todc-bootstrap@3.4.0-3.4.1?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "156acf30-0b6b-49d2-add1-85fc43f526dc",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "02ec63c7ae947e371eeedf8152b0f9222d6d20eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "22037a3455914e5662fa51a596677bdb329e2c5c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "537c9e08eb02ca46eb8ad0489ce2b65dcf929593"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "aafafdc09404c4aa4447d7e898a2183def9cc1b1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "dfb8410ffc10a57d69b81620087c5a0b6027765a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1dadc506590e60b7869bc86d72fc11bd2ec7e47c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "2b3cc170bdd62b736b8741b036cadba2c62952f8"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "35e0b4e5ac71901d9919b1a32b5ae69cc660d470"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f3a9a3b609133c3d21d6b42abbf7f43bd111df72"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "65504b036ed1a76a6e25e93091ea4671ba068a10"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "66b1fc67e37d01ee45ca75c4eefb144d2dbe98fa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ebda3d2d73925feb52a464bc46e774c4ac6e8e7c"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.0?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "cded007d-1f00-43e3-a876-d8a0404f6f6e",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8bec1bba3e23ecba22cffb197a2d440af410b15d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "852c5747d5c52be833b5a5c2b97920b4236ec4c4"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5ada7c103fc1deabc925cc1fdbbb6e451c21fc70"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "73ce6cc884116ab9295bcdf7482ef236842d274e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "22037a3455914e5662fa51a596677bdb329e2c5c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "75a138069e6333d953821305e2e8421c3fd57b88"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "afa7af2bc7cbe37eeccb9b65577744c08219c5a9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f3a9a3b609133c3d21d6b42abbf7f43bd111df72"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0b53e330c67cd6f8551b7dc12e033b31e4ab1bdb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "417669d8044f5a36d03de348e04e01805684d479"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "66b1fc67e37d01ee45ca75c4eefb144d2dbe98fa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "aafafdc09404c4aa4447d7e898a2183def9cc1b1"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.1?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "0cda8ace-d4a5-47b9-95a4-b301e0da7e40",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.2",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "5009e973465fbe2477b22e4dcd1041e6bb385c21"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "815675548997eadc98fc4beb1b698b35c2d5c5cb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ccb7ff3435bb5cff1fe9643fc0ac8cdde2dcd177"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "41c54bf695145ae0b4d9020a1da308ceb05dcaf3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "973e37a8502921d56bc02bb55321f45b072b6f71"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b3f2ef9f985e7906c9360756b73cd64bf7733647"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f8752e9ae24daec0a0baffd7819122f8c6fd9103"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "36f0fd5cb451590d055b38f6afad8c69f74bfc9a"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.2?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "8049d426-2b6d-4a1f-b74c-c03e45c89863",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.4",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "542cfd539f0cad650342c8cab8baf1cdbcd5fea6"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ccb7ff3435bb5cff1fe9643fc0ac8cdde2dcd177"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "2e1d08a9694cd5a694eabca746cfad95fb99653e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ed29315e0ffb3f14382431f2724235bf67f44eb3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f2183455571b19311a235bd5aa204e694ade8e94"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a22e254bf086bf442a09344afe0e6cf188f5a1d5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "27947c0c0fa837da9bdfdfc36f649c25f54bd1c0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "fc6b4268fbd57ad95d2b41a1d4d6866f222fbdb2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.4?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "6b98cb7d-bd24-40e9-a4ce-aa70cb8099a4",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.5",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "6987e3bdad7a3a5d143ddf2453e29782dbd99c29"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4c936da026b2fb2e6b63d3d4ddbc3d9beb658d17"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "16506513c5f3d95982e73fb6820cf3c4c58d6897"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bbf55e20f1ebb6368522799f29db39830a08ef93"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "08df9a96752852f2cbd310c30facd934e348c2c5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ecf2245dd39ea3b17ccb4bea42cda46356376078"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6c264e0e0026ab5ece49350c6a8812398e696cbb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "abc2e3a1163de52378c71bb92d007c22abb0a393"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.5?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "5ea3f2b0-ec16-4e97-b059-7a4d1b16bb44",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.6",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6c3f0c97a5c7e1ef6453d6b64e875b5eb141d397"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "95fb9d7b83bebc9c37cefee87514f5979ee8785d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "29d019dd007929a57c564b2b85785e4e12e58db2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4316dcfb54e1b0a428e1d37203a4028fd0408298"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "55253bf57e974dc89014e57783a1a4c737e7c867"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8eb176c70b9cfa6871b76d6dc98fb526e7e9b3de"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8cf4186ce86777b4b408ce308ca9f66dd421f509"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "85cacfd84a6258ed0e193874efa31c87f86b9e87"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "791aa054a026bddc0de92bad6cf7a1c6e73713d5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bcb96e31a2b8fed5575995fa0c58293e64972116"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.6?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "9b63c350-d337-45a3-a983-9a419a44ea2d",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.3.7",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3b965a36a6b08854ad6eddedf85c5319fd392b4a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f597f59f955cda06e5d7a79342d9e0c22b5ec6d2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "430a443d74830fe9be26efca431f448c1b3740f9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1468254bdfd4712c9f496b8f521225362a17ed95"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e0d7b2bde55a0bac1b658a507e8ca491a6729e06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "8256575374f430476bdcd49de98c77990229ce31"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca50d917657a1631d58ce0c791604760d5532d12"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.3.7?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "735db4ec-3dae-4785-a258-ee9f557d1b58",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "47ddf09ecdeb7ef9c105e0a626c5b159e1bb64e1"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5cd66a9a8e12605ab173f3b79eb1caca6e3e2499"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "13c97b997df4ea0d6f3a022b9e92941d63533e1c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9fa2bda3c1c5737db82073c722aadb4cd91f4e6b"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "47b894ffa73197d69d22959400934b2199df7170"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "01cbf828521a02f4ff52dda884b6dd3f360f0c46"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "369a832ef7f8a57e9b59b84b181fdb4fc9125050"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "358e190d6078c6ea49f0046bf81bfec56eb03fa5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a820070e7ebb07f717641ea35fc839820c0b74b0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7b6da59686964ae3dbff87da24c997e92f560415"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.4.0?repo=cdnjs"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "80824cd7-aa48-4f12-a1ef-1635ddb870ba",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "twitter-bootstrap",
+      "version" : "3.4.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "e2b7590d6ec1fdac66b01fdf66ae0879f53b1262"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "de51a8494180a6db074af2dee2383f0a363c5b08"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f56b60aaef5a9b10c6c6c151a98946f6aac168f8"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f8676e1f4a902a63088f45982f3f9b6a6c401b47"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b08e098d10fa20a8f0ecdf24f3716ecd68826e34"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "11277f4e04cf070a350e566b053ef2215993720c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "c7480814f50a27a02502df89cd9c679cf3341405"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "44bc1850f570972267b169ae18f1cb06b611ffa2"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "beee0e080ea6dcc8c0661b66c1baa08e45f4ecb6"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "278e49a86e634da6f2a02f3b47dd9d2a8f26210f"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "13e3ce0a2d2da5a962050b9a0ea6c67c376b3616"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b0972fdcce82fd583d4c2ccc3f2e3df7404a19d0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b16fd8226bd6bfb08e568f1b1d0a21d60247cefb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "63c6119052abd1f848ee51657ce892a78d019c06"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ca35b697d99cae4d1b60f2d60fcd37771987eb07"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:etc/twitter-bootstrap@3.4.1?repo=cdnjs"
+    }
+  ],
+  "dependencies" : [ ],
+  "vulnerabilities" : [
+    {
+      "id" : "CVE-2020-15250",
+      "source" : {
+        "name" : "National Vulnerability Database",
+        "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-15250"
+      },
+      "ratings" : [
+        {
+          "score" : 1.9,
+          "severity" : "low",
+          "method" : "CVSSv2",
+          "vector" : "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+        },
+        {
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "published" : "2020-10-12T08:55:13Z",
+      "updated" : "2024-08-04T04:08:23Z",
+      "affects" : [
+        {
+          "ref" : "f41beda9-d336-4895-96a9-ad18f922c1a1"
+        },
+        {
+          "ref" : "a5bc3787-c0e6-4316-825e-769dcf1beb98"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-269g-pwp5-87pp",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-269g-pwp5-87pp"
+      },
+      "ratings" : [
+        {
+          "score" : 4.4,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "published" : "2020-10-12T08:33:00Z",
+      "updated" : "2024-03-14T20:20:38Z",
+      "affects" : [
+        {
+          "ref" : "f41beda9-d336-4895-96a9-ad18f922c1a1"
+        },
+        {
+          "ref" : "a5bc3787-c0e6-4316-825e-769dcf1beb98"
+        }
+      ]
+    },
+    {
+      "id" : "CVE-2020-13956",
+      "source" : {
+        "name" : "National Vulnerability Database",
+        "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-13956"
+      },
+      "ratings" : [
+        {
+          "score" : 5.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+        },
+        {
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "published" : "2020-12-02T07:20:12Z",
+      "updated" : "2024-08-04T03:32:14Z",
+      "affects" : [
+        {
+          "ref" : "0c58c739-fd61-4c3d-9d05-17a22bdff06a"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-7r82-7xv7-xcpj",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-7r82-7xv7-xcpj"
+      },
+      "ratings" : [
+        {
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "published" : "2021-06-03T14:40:23Z",
+      "updated" : "2024-03-14T20:19:17Z",
+      "affects" : [
+        {
+          "ref" : "0c58c739-fd61-4c3d-9d05-17a22bdff06a"
+        }
+      ]
+    }
+  ]
+}
