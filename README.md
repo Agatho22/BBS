@@ -43,7 +43,7 @@
 | 백엔드 | Java (Servlet & JSP) |
 | 프론트엔드 | HTML, CSS, Bootstrap |
 | DB | MySQL |
-| 빌드도구 | Eclipse + Maven |
+| 빌드도구 | Eclipse |
 | 로깅 | Log4j2 |
 | 보안 | SHA-256 + Salt, OTP, 로그인 제한 |
 | 배포 | Apache Tomcat (로컬 테스트 환경) |
