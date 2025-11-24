@@ -7,7 +7,7 @@ Java Servlet & JSP와 MySQL을 활용해 회원 관리, 게시판, 파일 업로
 
 
 ## 📌 주요 기능
----
+
 
 - 🔐 **회원 관리**
   - 회원가입 / 로그인 / 로그아웃
@@ -39,7 +39,7 @@ Java Servlet & JSP와 MySQL을 활용해 회원 관리, 게시판, 파일 업로
 
 
 ## 🛠️ 기술 스택
----
+
 
 | 항목 | 기술 |
 |------|------|
@@ -149,7 +149,6 @@ BBS/
 
 
 ## DB 구조
-```
 
 ```데이터베이스 구조
 
@@ -188,6 +187,7 @@ CREATE TABLE FILE (
 );
 
 -- 🔗 파일-게시글 매핑 테이블
+
 CREATE TABLE FileBbsMapping (
     mappingID       INT PRIMARY KEY AUTO_INCREMENT,   -- 매핑 ID
     fileName        VARCHAR(255) NOT NULL,            -- FILE 테이블의 fileName 참조
@@ -223,7 +223,6 @@ CREATE TABLE FileBbsMapping (
 
 ## 🛡️ 주요 취약점 진단 내용
 
-
 프로젝트 개발 완료 후, Sparrow SAST(스페로우 정적 분석 도구)를 이용하여 정적 분석 기반의 취약점 진단을 수행했습니다.
 또한, 일부 항목은 수동 코드 리뷰 및 HTTP 요청 직접 테스트를 통해 보완 여부를 검증했습니다.
 
@@ -251,7 +250,6 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
 ## 🛡️ SBOM (CycloneDX 1.6)
 
-
 해당 프로젝트는 CycloneDX 1.6에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 기술했습니다.
 
 목적
@@ -261,7 +259,6 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
   - 취약점 진단 도구(SCA)를 통한 소스코드 내 오픈소스 CVE 취약점 확인
 
 ## CycloneDX 1.6 JSON 
-
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
