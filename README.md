@@ -4,9 +4,10 @@
 회원가입, 로그인, 게시글 등록/수정/삭제, 파일 업로드, 관리자 페이지, OTP 인증 등 다양한 기능을 포함하고 있으며, **취약점 보완**을 중점으로 설계되었습니다.
 Java Servlet & JSP와 MySQL을 활용해 회원 관리, 게시판, 파일 업로드, 관리자 페이지를 포함한 웹 게시판을 개발하고, SHA-256+Salt 비밀번호 해싱, 로그인 시도 제한, CSRF/XSS 방어, OTP 기반 2차 인증 등 보안 기능을 직접 설계·구현한 프로젝트입니다.
 
----
+
 
 ## 📌 주요 기능
+---
 
 - 🔐 **회원 관리**
   - 회원가입 / 로그인 / 로그아웃
@@ -35,9 +36,10 @@ Java Servlet & JSP와 MySQL을 활용해 회원 관리, 게시판, 파일 업로
   - 게시글 관리 (숨김, 삭제, 비밀글 열람)
   - 로그 기록 (Log4j2 적용)
 
----
+
 
 ## 🛠️ 기술 스택
+---
 
 | 항목 | 기술 |
 |------|------|
@@ -144,9 +146,10 @@ BBS/
 │           ├── adminUpdate.jsp                      # 관리자 사용자 수정
 │           └── adminUser.jsp                        # 관리자 사용자 관리 페이지
 
-```
 
-DB 구조
+
+## DB 구조
+```
 
 ```데이터베이스 구조
 
@@ -195,16 +198,16 @@ CREATE TABLE FileBbsMapping (
     FOREIGN KEY (bbsID) REFERENCES BBS(bbsID)
 );
 
-## 🗃️ 데이터베이스 설계 (ERD 기반)
+🗃️ 데이터베이스 설계 (ERD 기반)
 
 - **BBS**: 게시글 정보를 저장하는 메인 테이블
 - **USER**: 사용자 정보 (관리자 여부, OTP 등 보안 필드 포함)
 - **FILE**: 파일 메타데이터 (파일명, 게시글 ID)
 - **FileBbsMapping**: 게시글과 파일 간 다대다 관계 매핑용 중간 테이블
 
-```
 
-📋 진단 개요
+## 📋 진단 개요
+```
 
  - 진단 도구: Sparrow SAST (스페로우 정적 분석 도구)
 
@@ -218,7 +221,8 @@ CREATE TABLE FileBbsMapping (
 
  - 진단 범위: Java 소스코드 전반(src/main/java), JSP 페이지, 사용자 입력 처리, DB 연동, 인증 로직
 
-🛡️ 주요 취약점 진단 내용
+## 🛡️ 주요 취약점 진단 내용
+```
 
 프로젝트 개발 완료 후, Sparrow SAST(스페로우 정적 분석 도구)를 이용하여 정적 분석 기반의 취약점 진단을 수행했습니다.
 또한, 일부 항목은 수동 코드 리뷰 및 HTTP 요청 직접 테스트를 통해 보완 여부를 검증했습니다.
@@ -243,9 +247,10 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
 다만, CSRF 방어 미적용 항목은 추후 개선 예정 입니다.
 
----
 
-🛡️ SBOM (CycloneDX 1.6)
+
+## 🛡️ SBOM (CycloneDX 1.6)
+---
 
 해당 프로젝트는 CycloneDX 1.6에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 기술했습니다.
 
@@ -255,7 +260,8 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
   - 취약점 진단 도구(SCA)를 통한 소스코드 내 오픈소스 CVE 취약점 확인
 
-CycloneDX 1.6 JSON 
+## CycloneDX 1.6 JSON 
+---
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
@@ -263,7 +269,8 @@ CycloneDX 1.6 버전을 사용한 이유
    - CycloneDX 1.6은 최신 스펙을 기반으로 하여, SBOM 교환 시 호환성과 확장성을 확보할 수 있습니다.
    - 이후 도입될 도구·플랫폼과의 연동을 고려하여, 장기적으로 유지보수하기 쉬운 버전을 선택했습니다.
 
-Sparrow SCA 보고서 (엑셀)
+## Sparrow SCA 보고서 (엑셀)
+---
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_%EB%B3%B4%EA%B3%A0%EC%84%9C.xlsx
 
