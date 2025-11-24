@@ -262,9 +262,14 @@ CycloneDX 1.6 JSON
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
-Sparrow SCA SBOM 보고서 (엑셀)
+CycloneDX 1.6 버전을 사용한 이
+   - CycloneDX 1.6은 최신 스펙을 기반으로 하여, SBOM 교환 시 호환성과 확장성을 확보할 수 있습니다.
+   - 이후 도입될 도구·플랫폼과의 연동을 고려하여, 장기적으로 유지보수하기 쉬운 버전을 선택했습니다.
+
+Sparrow SCA 보고서 (엑셀)
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_%EB%B3%B4%EA%B3%A0%EC%84%9C.xlsx
 
-
-
+Sparrow SCA를 통해 생성된 보고서(엑셀)입니다.  
+이 프로젝트에 포함된 오픈소스(OSS) 구성요소를 분석하여,  
+각 버전별 CVE 취약점을 식별하고 상위 버전 업데이트를 권고합니다.
