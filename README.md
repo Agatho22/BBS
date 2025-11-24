@@ -222,7 +222,7 @@ CREATE TABLE FileBbsMapping (
  - 진단 범위: Java 소스코드 전반(src/main/java), JSP 페이지, 사용자 입력 처리, DB 연동, 인증 로직
 
 ## 🛡️ 주요 취약점 진단 내용
-```
+
 
 프로젝트 개발 완료 후, Sparrow SAST(스페로우 정적 분석 도구)를 이용하여 정적 분석 기반의 취약점 진단을 수행했습니다.
 또한, 일부 항목은 수동 코드 리뷰 및 HTTP 요청 직접 테스트를 통해 보완 여부를 검증했습니다.
@@ -250,7 +250,7 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
 
 
 ## 🛡️ SBOM (CycloneDX 1.6)
----
+
 
 해당 프로젝트는 CycloneDX 1.6에 기반한 Software Bill of Materials(SBOM) 문서로, 해당 소프트웨어가 의존하고 있는 컴포넌트(라이브러리 및 외부 모듈)에 대한 정보를 기술했습니다.
 
@@ -261,7 +261,7 @@ Sparrow SAST를 통해 탐지된 대부분의 항목은 소스코드 레벨에�
   - 취약점 진단 도구(SCA)를 통한 소스코드 내 오픈소스 CVE 취약점 확인
 
 ## CycloneDX 1.6 JSON 
----
+
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_CycloneDX
 
@@ -270,7 +270,6 @@ CycloneDX 1.6 버전을 사용한 이유
    - 이후 도입될 도구·플랫폼과의 연동을 고려하여, 장기적으로 유지보수하기 쉬운 버전을 선택했습니다.
 
 ## Sparrow SCA 보고서 (엑셀)
----
 
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_%EB%B3%B4%EA%B3%A0%EC%84%9C.xlsx
 
