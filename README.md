@@ -271,4 +271,4 @@ CycloneDX 1.6 버전을 사용한 이유
 https://github.com/Agatho22/BBS/blob/main/BBS_SBOM_%EB%B3%B4%EA%B3%A0%EC%84%9C.xlsx
 
 Sparrow SCA를 통해 생성된 보고서(엑셀)입니다.  
-프로젝트에 포함된 오픈소스(OSS) 구성요소를 분석하여, 각 버전별 CVE 취약점을 식별하고 상위 버전 업데이트를 권고합니다.
+프로젝트에 포함된 오픈소스(OSS) 구성요소를 분석하여, 각 버전별 CVE 취약점을 식별하고, 보고서에 지시한 버전 업데이트를 권고합니다.
