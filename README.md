@@ -6,32 +6,32 @@ Java Servlet & JSP와 MySQL을 활용해 회원 관리, 게시판, 파일 업로
 
 
 
-## 📌 주요 기능
+## 주요 기능
 
 
-- 🔐 **회원 관리**
+- **회원 관리**
   - 회원가입 / 로그인 / 로그아웃
   - 비밀번호 찾기, 비밀번호 변경
   - 비밀번호 SHA-256 + 솔트 해싱
   - 계정 잠금, 로그인 실패 횟수 제한
 
-- 🧾 **게시판 기능**
+- **게시판 기능**
   - 게시글 등록 / 수정 / 삭제
   - 페이징 및 검색 기능
   - 파일 첨부 및 다운로드
   - 비밀글 기능
 
-- 🛡️ **보안 기능**
+- **보안 기능**
   - CSRF 방지
   - XSS 방지
   - 입력값 유효성 검증
   - 관리자 인증 시 OTP (2차 인증) 적용
 
-- 📂 **파일 업로드**
+- **파일 업로드**
   - 멀티파트 업로드 지원 (`@MultipartConfig`)
   - 확장자 제한 및 업로드 크기 제한 설정
 
-- ⚙️ **관리자 기능**
+- **관리자 기능**
   - 사용자 목록 조회 및 수정
   - 게시글 관리 (숨김, 삭제, 비밀글 열람)
   - 로그 기록 (Log4j2 적용)
@@ -152,7 +152,7 @@ BBS/
 
 ```데이터베이스 구조
 
--- 📝 게시판 테이블
+-- 게시판 테이블
 CREATE TABLE BBS (
     bbsID           INT PRIMARY KEY AUTO_INCREMENT,   -- 게시글 고유 ID
     bbsTitle        VARCHAR(255) NOT NULL,            -- 게시글 제목
@@ -163,7 +163,7 @@ CREATE TABLE BBS (
     isSecret        BOOLEAN DEFAULT FALSE             -- 비밀글 여부 (TRUE: 비밀글)
 );
 
--- 👤 사용자 테이블
+-- 사용자 테이블
 CREATE TABLE USER (
     userID          VARCHAR(50) PRIMARY KEY,          -- 사용자 ID
     userPassword    VARCHAR(255) NOT NULL,            -- 암호화된 비밀번호
@@ -178,7 +178,7 @@ CREATE TABLE USER (
     STATUS          VARCHAR(20) DEFAULT 'ACTIVE'      -- 계정 상태 (예: ACTIVE, SUSPENDED)
 );
 
--- 📎 파일 테이블
+-- 파일 테이블
 CREATE TABLE FILE (
     fileName        VARCHAR(255) PRIMARY KEY,         -- 저장된 파일 이름 (실제 파일명)
     fileRealName    VARCHAR(255) NOT NULL,            -- 사용자에게 보여지는 원래 이름
@@ -186,7 +186,7 @@ CREATE TABLE FILE (
     FOREIGN KEY (bbsID) REFERENCES BBS(bbsID)
 );
 
--- 🔗 파일-게시글 매핑 테이블
+-- 파일-게시글 매핑 테이블
 
 CREATE TABLE FileBbsMapping (
     mappingID       INT PRIMARY KEY AUTO_INCREMENT,   -- 매핑 ID
