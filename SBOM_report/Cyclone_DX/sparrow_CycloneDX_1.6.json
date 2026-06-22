@@ -1,0 +1,814 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "1bd1aa5c-534f-312d-ba4f-c1890cb004b2",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-06-22T00:16:12Z",
+    "authors" : [
+      {
+        "name" : "핀시큐리티"
+      }
+    ],
+    "component" : {
+      "type" : "application",
+      "name" : "Vulnerability Bulletin"
+    }
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "333383ef-0a2f-45c1-82ff-69e092eeb256",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "@buttercup/importer",
+      "version" : "3.0.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "9ce04e34240f674bc72680f8b843b1457383161a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "14349c1ba651bb8aa651e33bf1e51cddf147165f"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://spdx.org/licenses/MIT.html"
+          }
+        }
+      ],
+      "purl" : "pkg:npm/%40buttercup/importer@3.0.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "ffc270cb-6ae3-428c-9285-ca9aa867550e",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.conversantmedia:disruptor",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.conversantmedia/disruptor"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "b7c3eb69-ce94-4339-8ca8-fe27ddf894bb",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.core:jackson-core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "64dddd65-2f44-4d43-9c8e-6b8100c34add",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.core:jackson-databind",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "8f0fc604-f08b-4e48-b798-0343c209956d",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-xml"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "38a7b876-8981-4fa4-8d1f-9cd211cb0386",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "7426d25a-d484-4df1-8645-e05ef529eac6",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.lmax:disruptor",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.lmax/disruptor"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "bb01ac18-c6eb-43da-8df5-c2de60fcdf17",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.mysql:mysql-connector-j",
+      "version" : "8.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "b1bc0f47bcad26ad5f9bceefb63fcb920d868fca"
+        }
+      ],
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.mysql/mysql-connector-j@8.4.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "72aa4609-3fd3-44c1-bce7-55c9c79e5569",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "com.sun.mail:javax.mail",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.sun.mail/javax.mail"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "2b303f6c-adbd-485c-b35f-23dbdb45494c",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.tencentcloudapi:tencentcloud-sdk-java-cdn",
+      "version" : "3.1.228",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "a27082684a2ff0bf397666c3943496c44541d1ca"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "667db307f9a672fa38ba31ace29216ddc18c20fc"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "0b6792d0bcb448ef94fe36de7ce46ff0beb47b1e"
+        }
+      ],
+      "licenses" : [ ],
+      "purl" : "pkg:maven/com.tencentcloudapi/tencentcloud-sdk-java-cdn@3.1.228"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "de31c71a-6a85-4421-99e5-bb04d4ff2292",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "com.warrenstrange:googleauth",
+      "version" : "1.4.0",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "af79f2f98f3f6e9930802f7e03f51fa709437565"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "b5f2385d1e5f86f40ae1fceb6406e21a1cb36cb3"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://spdx.org/licenses/BSD-3-Clause.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/com.warrenstrange/googleauth@1.4.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "c7013506-67a4-478b-9ca4-06f76b1c89a4",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "commons-codec:commons-codec",
+      "version" : "1.11",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "8a0430c3138ce4a23b0b6c7b7409df54bb76feb9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3acb4705652e16236558f0f4f2192cc33c3bd189"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "bce4ba84fd527950e35040b20a991c63e90e2850"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/commons-codec/commons-codec@1.11"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "e76d2471-6c8a-49a6-884a-de29f3574817",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "commons-codec:commons-codec",
+      "version" : "1.9",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "3f15fff45d57656685abfee9e8302bf14580044c"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9ce04e34240f674bc72680f8b843b1457383161a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "36b5cdaabc3114cc74759fcadfc4af6a9c41b3f5"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/commons-codec/commons-codec@1.9"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "a6a2fe19-2a50-4d1a-8f9b-ac2aa208e968",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.activation:javax.activation-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.activation/javax.activation-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "2247b7c4-bb3d-4dea-b1b7-93debd21d895",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.jms:javax.jms-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.jms/javax.jms-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "ec381176-8dd5-408c-b930-840e003c89c2",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "javax.mail:javax.mail-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/javax.mail/javax.mail-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "28dd50ec-891a-4ef9-9032-87a29acd799e",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "javax.servlet:javax.servlet-api",
+      "version" : "4.0.1",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "49a9da44db6e6b5f44ce15ddfcfe2b6666151b25"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a27082684a2ff0bf397666c3943496c44541d1ca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "CDDL-1.0",
+            "url" : "https://spdx.org/licenses/CDDL-1.0.html"
+          }
+        },
+        {
+          "license" : {
+            "id" : "GPL-2.0-with-classpath-exception",
+            "url" : "https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html"
+          }
+        },
+        {
+          "license" : {
+            "id" : "CDDL-1.1",
+            "url" : "https://spdx.org/licenses/CDDL-1.1.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/javax.servlet/javax.servlet-api@4.0.1"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "cd91fb33-bc88-4c83-8bc2-3e3d47d12530",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "junit:junit",
+      "version" : "4.11",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "4e031bb61df09069aeb2bffb4019e7a5034a4ee0"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "28e0ad201304e4a4abf999ca0570b7cffc352c3c"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "CPL-1.0",
+            "url" : "https://spdx.org/licenses/CPL-1.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/junit/junit@4.11"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "22760d83-0ac9-4ea0-a527-41b63943374b",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "junit:junit",
+      "version" : "4.12",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "2973d150c0dc1fefe998f834810d68f278ea58ec"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "EPL-1.0",
+            "url" : "https://spdx.org/licenses/EPL-1.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/junit/junit@4.12"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "4edf8263-b16c-4ed0-9e7a-859d0c5f3af0",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.commons:commons-compress",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.commons/commons-compress"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "855fecc4-2210-4af4-a3d3-6d92045a1981",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.commons:commons-csv",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.commons/commons-csv"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "681e1d16-32ff-41f8-862d-b33cabacdfba",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "N/A",
+            "email" : "None"
+          }
+        ]
+      },
+      "name" : "org.apache.httpcomponents:httpclient",
+      "version" : "4.5.3",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "d1577ae15f01ef5438c5afc62162457c00a34713"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "4969730c661fff76fa7f9d4c7c61545817f5b033"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ba2c3d7d3a2ec43abbb832c60f46e333e6624723"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://spdx.org/licenses/Apache-2.0.html"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.3"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "2be51bfb-f9e2-40ca-99db-a71632df0b8a",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.kafka:kafka-clients",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.kafka/kafka-clients"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "bdf38b56-387f-4ef9-91b4-22e4aee1d79b",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-api",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "f090c670-1593-4541-a787-74b561093c0b",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-api",
+      "version" : "2.25.0",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "f6056685-e981-48ec-975f-7d577bde84d2",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.apache.logging.log4j:log4j-core",
+      "version" : "2.25.0",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "ba7a4c70-f40e-4b58-8626-d3e06d992c0e",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.jctools:jctools-core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.jctools/jctools-core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "faea6450-3d52-419b-b7df-bfdad17eaa2f",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.jspecify:jspecify",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.jspecify/jspecify"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "f0fcd0ed-0d9c-4ed4-b2ec-887cd85b8f8d",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.osgi:org.osgi.core",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.osgi/org.osgi.core"
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "2570480d-a3be-4093-80ea-410592dda438",
+      "supplier" : {
+        "contact" : [
+          { }
+        ]
+      },
+      "name" : "org.zeromq:jeromq",
+      "version" : "unknown",
+      "licenses" : [ ],
+      "purl" : "pkg:maven/org.zeromq/jeromq"
+    }
+  ],
+  "dependencies" : [ ],
+  "vulnerabilities" : [
+    {
+      "id" : "CVE-2020-15250",
+      "source" : {
+        "name" : "National Vulnerability Database",
+        "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-15250"
+      },
+      "ratings" : [
+        {
+          "score" : 1.9,
+          "severity" : "low",
+          "method" : "CVSSv2",
+          "vector" : "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+        },
+        {
+          "score" : 5.5,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "published" : "2020-10-12T09:15:13Z",
+      "updated" : "2024-11-20T20:05:11Z",
+      "affects" : [
+        {
+          "ref" : "cd91fb33-bc88-4c83-8bc2-3e3d47d12530"
+        },
+        {
+          "ref" : "22760d83-0ac9-4ea0-a527-41b63943374b"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-269g-pwp5-87pp",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-269g-pwp5-87pp"
+      },
+      "ratings" : [
+        {
+          "score" : 4.4,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "published" : "2020-10-12T08:33:00Z",
+      "updated" : "2026-04-10T06:29:15Z",
+      "affects" : [
+        {
+          "ref" : "cd91fb33-bc88-4c83-8bc2-3e3d47d12530"
+        },
+        {
+          "ref" : "22760d83-0ac9-4ea0-a527-41b63943374b"
+        }
+      ]
+    },
+    {
+      "id" : "CVE-2020-13956",
+      "source" : {
+        "name" : "National Vulnerability Database",
+        "url" : "https://nvd.nist.gov/vuln/detail/CVE-2020-13956"
+      },
+      "ratings" : [
+        {
+          "score" : 5.0,
+          "severity" : "medium",
+          "method" : "CVSSv2",
+          "vector" : "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+        },
+        {
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "published" : "2020-12-02T08:15:14Z",
+      "updated" : "2025-12-01T07:15:48Z",
+      "affects" : [
+        {
+          "ref" : "681e1d16-32ff-41f8-862d-b33cabacdfba"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-7r82-7xv7-xcpj",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-7r82-7xv7-xcpj"
+      },
+      "ratings" : [
+        {
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "published" : "2021-06-03T14:40:23Z",
+      "updated" : "2026-02-03T17:20:49Z",
+      "affects" : [
+        {
+          "ref" : "681e1d16-32ff-41f8-862d-b33cabacdfba"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-3pxv-7cmr-fjr4",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-3pxv-7cmr-fjr4"
+      },
+      "ratings" : [
+        {
+          "score" : 6.9,
+          "severity" : "medium",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+        }
+      ],
+      "published" : "2026-04-10T09:31:17Z",
+      "updated" : "2026-04-16T02:29:10Z",
+      "affects" : [
+        {
+          "ref" : "f6056685-e981-48ec-975f-7d577bde84d2"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-445c-vh5m-36rj",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-445c-vh5m-36rj"
+      },
+      "ratings" : [
+        {
+          "score" : 6.9,
+          "severity" : "medium",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+        }
+      ],
+      "published" : "2026-04-10T09:31:17Z",
+      "updated" : "2026-04-17T06:29:09Z",
+      "affects" : [
+        {
+          "ref" : "f6056685-e981-48ec-975f-7d577bde84d2"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-6hg6-v5c8-fphq",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-6hg6-v5c8-fphq"
+      },
+      "ratings" : [
+        {
+          "score" : 6.3,
+          "severity" : "medium",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N"
+        }
+      ],
+      "published" : "2026-04-10T09:31:17Z",
+      "updated" : "2026-04-17T03:29:10Z",
+      "affects" : [
+        {
+          "ref" : "f6056685-e981-48ec-975f-7d577bde84d2"
+        }
+      ]
+    },
+    {
+      "id" : "GHSA-vc5p-v9hr-52mj",
+      "source" : {
+        "name" : "GitHub Security Advisory Database",
+        "url" : "https://osv.dev/vulnerability/GHSA-vc5p-v9hr-52mj"
+      },
+      "ratings" : [
+        {
+          "score" : 6.3,
+          "severity" : "medium",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N"
+        }
+      ],
+      "published" : "2025-12-18T12:31:44Z",
+      "updated" : "2026-02-03T18:10:00Z",
+      "affects" : [
+        {
+          "ref" : "f6056685-e981-48ec-975f-7d577bde84d2"
+        }
+      ]
+    }
+  ]
+}
