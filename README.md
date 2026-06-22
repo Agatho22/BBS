@@ -434,9 +434,11 @@ BBS  1 ─── N FileBbsMapping
 
 | 파일 | 설명 |
 |---|---|
-| `BBS_SBOM_CycloneDX.json` | CycloneDX 기반 SBOM 문서 (`specVersion` 필드로 버전 확인) |
-| `BBS_SBOM_보고서.xlsx` | Sparrow SCA 기반 오픈소스 취약점 분석 보고서 |
-| `BBS.json` | 프로젝트 구성요소 분석 결과 JSON |
+| `sparrow_CycloneDX_1.6.json` | Sparrow SCA CycloneDX 기반 SBOM 문서 |
+| `sparrow_SPDX_2.3.xlsx` | Sparrow SCA SPDX 기반 SBOM 문서 |
+| `Blackduck_CycloneDX_1.6.json` | Blackduck SCA CycloneDX 기반 SBOM 문서 |
+| `Blackduck_SPDX_2.3` | Blackduck SCA SPDX 기반 SBOM 문서 |
+| `결과 보고서.xlsx` | Sparrow SCA, Blackduck SCA 기반 오픈소스 취약점 분석 보고서 |
 
 SBOM은 소프트웨어 공급망 투명성을 높이고, 사용 중인 라이브러리의 CVE 취약점 추적을 위해 활용할 수 있습니다.
 
