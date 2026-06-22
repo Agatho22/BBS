@@ -484,8 +484,59 @@ sudo chmod -R 750 /opt/upload
 - 업로드 가능 파일 정책 정리 및 MIME/확장자 규칙 일원화
 - Docker Compose 기반 실행 환경 구성
 
-## 14. 사용한 오픈소
+본 프로젝트는 SCA/SBOM 분석을 통해 사용 중인 오픈소스 컴포넌트의 취약점을 점검하였습니다.  
+점검 결과, 일부 라이브러리에서 Medium 등급의 CVE 취약점이 확인되었으며, 아래와 같이 취약 컴포넌트와 조치 방안을 정리하였습니다.
 
+### 14 사용 오픈소스 및 취약점 현황
+
+| 컴포넌트 | 현재 버전 | 라이선스 | 검출 CVE 수 | 주요 CVE | 심각도 | 권장 조치 |
+|---|---:|---|---:|---|---|---|
+| `org.apache.logging.log4j:log4j-core` | 2.25.0 | Apache License 2.0 | 6개 | CVE-2026-34478<br>CVE-2026-34479<br>CVE-2026-34480<br>CVE-2025-68161<br>CVE-2026-34477<br>CVE-2026-34481 | Medium | 2.25.4 이상으로 업데이트 |
+| `junit:junit` | 4.11 | CPL-1.0 | 1개 | CVE-2020-15250 | Medium | 4.13.1 이상으로 업데이트 또는 런타임 배포 제외 |
+| `junit:junit` | 4.12 | EPL-1.0 | 1개 | CVE-2020-15250 | Medium | 4.13.1 이상으로 업데이트 또는 런타임 배포 제외 |
+| `org.apache.httpcomponents:httpclient` | 4.5.3 | Apache-2.0 | 1개 | CVE-2020-13956 | Medium | 4.5.13 이상으로 업데이트 |
+
+### 14.1 상세 취약점 목록
+
+| CVE ID | Severity | CVSS | 컴포넌트 | 현재 버전 |
+|---|---|---:|---|---:|
+| CVE-2026-34478 | Medium | 6.9 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2026-34479 | Medium | 6.9 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2026-34480 | Medium | 6.9 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2025-68161 | Medium | 6.3 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2026-34477 | Medium | 6.3 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2026-34481 | Medium | 6.3 | `org.apache.logging.log4j:log4j-core` | 2.25.0 |
+| CVE-2020-15250 | Medium | 5.5 | `junit:junit` | 4.11 |
+| CVE-2020-15250 | Medium | 5.5 | `junit:junit` | 4.12 |
+| CVE-2020-13956 | Medium | 5.3 | `org.apache.httpcomponents:httpclient` | 4.5.3 |
+
+### 14.2 취약점 검출 경로
+
+| 컴포넌트 | 검출 경로 |
+|---|---|
+| `org.apache.logging.log4j:log4j-core` | `src/main/webapp/WEB-INF/lib/log4j-core-2.25.0.jar`<br>`src/main/webapp/WEB-INF/lib/apache-log4j-2.25.0-bin.zip!/log4j-core-2.25.0.jar` |
+| `junit:junit:4.12` | `src/main/webapp/WEB-INF/lib/googleauth-1.4.0.jar` |
+| `junit:junit:4.11` | `src/main/webapp/WEB-INF/lib/commons-codec-1.9.jar` |
+| `org.apache.httpcomponents:httpclient:4.5.3` | `src/main/webapp/WEB-INF/lib/googleauth-1.4.0.jar` |
+
+### 14.3 보안 조치 계획
+
+- `log4j-core` 2.25.0 버전을 2.25.4 이상으로 업데이트
+- `WEB-INF/lib` 내부의 불필요한 `apache-log4j-2.25.0-bin.zip` 파일 제거
+- JUnit 라이브러리가 운영 환경에서 필요하지 않은 경우 배포 대상에서 제외
+- JUnit이 필요한 경우 4.13.1 이상 버전으로 업데이트
+- Apache HttpClient 4.5.3을 4.5.13 이상 버전으로 업데이트
+- GoogleAuth 라이브러리 사용 시 포함된 전이 의존성 점검
+- 라이브러리 업데이트 후 SBOM/SCA 재점검 수행
+
+### 14.4 점검 결과 요약
+
+SCA/SBOM 점검 결과, 본 프로젝트에서 확인된 취약점은 모두 Medium 등급으로 분류되었습니다.  
+가장 많은 취약점이 확인된 컴포넌트는 `log4j-core` 2.25.0이며, 해당 라이브러리는 우선적으로 2.25.4 이상 버전으로 업데이트할 예정입니다.
+
+또한 `apache-log4j-2.25.0-bin.zip` 파일은 실행에 필요한 JAR 파일이 아닌 압축 파일이므로, 배포 경로에서 제거하여 불필요한 취약점 검출을 방지합니다.
+
+JUnit 관련 취약점은 테스트 라이브러리에서 발생한 것으로 확인되며, 운영 환경에서 직접 사용하지 않는 경우 런타임 배포 대상에서 제외하는 방식으로 조치할 수 있습니다. Apache HttpClient는 `googleauth-1.4.0.jar`와 관련되어 검출되었으므로, 실제 사용 여부를 확인한 뒤 4.5.13 이상으로 업데이트해야합니다.
 
 
 ## 15. 라이선스
